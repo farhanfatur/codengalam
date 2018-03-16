@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+	* {
+		margin : 0;
+		padding : 0;
+		font-family: 'Work Sans', sans-serif;
+	}
+	.container {
+		margin : 0;
+		padding : 0;
+	}
+	div.header {
+		padding : 20px;
+		width : 100%;
+		position: fixed;
+	}
+	div.header-position {
+		margin : 9px;
+	}
+	.navbar {
+		float: right;
+		position: relative;
+		padding: 10px;
+	}
+	.list {
+		list-style: none;
+		padding : 0;
+		margin-right: 20px;
+	}
+	li {
+		display: inline-block;
+		padding: 2px;
+	}
+	.logo {
+		display: inline;
+	}
+	a {
+		text-decoration: none;
+		color : white;
+	}
+	.active {
+		border-bottom: 3px solid white;
+	}
+	div.wrapper1 {
+		background-color: #005792;
+		padding: 5px;
+		overflow: auto;
+	}
+	div.slideimage {
+		background-image : url('assets/images/Wisata-Malang.jpg');
+		height : 250px;
+	}
+	.content1 {
+		width: 55%;
+		float: left;
+		color: white;
+	}
+	.rightimage {
+		float: left;
+	}
