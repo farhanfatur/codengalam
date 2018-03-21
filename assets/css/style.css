@@ -1,59 +1,656 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans');
-	* {
-		margin : 0;
-		padding : 0;
-		font-family: 'Work Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Lato|Libre+Baskerville|Nanum+Gothic');
+
+	.slider {
+		margin : 0 auto;
+		width: 100%;
+		height: 300px;
 	}
-	.container {
-		margin : 0;
-		padding : 0;
+
+	.header{
+		width: 100%;
+		overflow: hidden;
+		top: 0;
+		height: 86px;
+		background-color: rgba(4, 102, 147, 0.3);
+	    z-index:  10000;
+	    position: fixed;
+	    padding-top: 16px;
+	    padding-bottom : 16px;
+	    padding-left: 24px;
+	    padding-right: 24px;
+	    display:  flex;
 	}
-	div.header {
-		padding : 20px;
-		width : 100%;
-		position: fixed;
+
+	.footer {
+		padding: 12px;
+		color : white;
+		background-color: #0b2247;
 	}
-	div.header-position {
-		margin : 9px;
-	}
-	.navbar {
-		float: right;
+
+	.section1 {
 		position: relative;
-		padding: 10px;
 	}
-	.list {
+
+
+	.link-news {
+		color : #51ADCF;
+		transition : 0.2s linear;
+	}
+
+	.link-news:hover {
+		color : #3e8fad;
+	}
+
+	.preloader {
+		position: fixed;
+		top : 0;
+		left : 0;
+		width : 100%;
+		height : 100%;
+		background-color : #fff;
+		z-index : 100000;
+	}
+
+	.preloader .loading {
+		position: absolute;
+		top : 50%;
+		left : 50%;
+		transform : translate(-50%, -50%);
+	}
+
+	/* Image */
+	.img-circle-sm {
+		width: 160px;
+		height: 140px;
+		border-radius: 50%;
+	}
+
+	.img-galery, .img-caption-galery {
+		width: 400px;
+		height: 250px;
+	}
+	
+	.img-galery:hover  {
+		box-shadow : ;
+	}
+
+	.img-page {
+		width: 1250px;
+	}
+
+	.img-tourism {
+		width: 500px;
+		height: 250px;
+	}
+
+	.img-overlay {
+		width: 400px;
+	    height: 257.3px;
+	    background-color: #ffb00f;
+	    z-index: 1;
+	    opacity: 0.5;
+	    position: absolute;
+	    top: 0;
+	    display:none;
+	}
+
+	div.footer-overlay {
+		margin-bottom : 0;
+	}
+
+	.picture-1 {
+		background-image: url('../images/Wisata-Malang.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.picture-2 {
+		background-image: url('../images/wrapper2.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.picture-3 {
+		background-image: url('../images/pantai-3-warna-malang-by-rulayyy.jpg');
+	}
+
+	.picture-4 {
+		background-image: url('../images/sub-list1.jpg');
+	}
+
+	/* End of Image */
+	.img-slider-1 {
+		background : rgba(0, 0, 0);
+		padding: 320px;
+	}
+
+	.img-slider-2 {
+		background-repeat: no-repeat;
+		padding: 250px;
+	}
+
+	.clear {
+		clear: both;
+	}
+
+	.box-md {
+		margin : 0;
+		padding: 120px;
+	}
+
+	.box-sm {
+		background : green;
+		height : 200px;
+	}
+
+	.box-img-1 {
+		opacity : 0.7;
+		background-image : url('../images/slider2.jpg');
+		background-repeat: no-repeat;
+		transition : 0.2s linear;
+	}
+
+	.box-img-2 {
+		opacity : 0.7;
+		background-image : url('../images/gambar.png');
+		background-repeat: no-repeat;
+		transition : 0.2s linear;
+	}
+
+	.box-img-2:hover, .box-img-1:hover {
+		background-color : rgba(0, 0, 0, 0.5);
+		opacity: 1.0;
+	}
+
+	ul {
 		list-style: none;
-		padding : 0;
-		margin-right: 20px;
 	}
-	li {
-		display: inline-block;
-		padding: 2px;
+
+	.active {
+		border-bottom : 2px solid white;
 	}
-	.logo {
-		display: inline;
-	}
+
 	a {
 		text-decoration: none;
-		color : white;
-	}
-	.active {
-		border-bottom: 3px solid white;
-	}
-	div.wrapper1 {
-		background-color: #005792;
-		padding: 5px;
-		overflow: auto;
-	}
-	div.slideimage {
-		background-image : url('assets/images/Wisata-Malang.jpg');
-		height : 250px;
-	}
-	.content1 {
-		width: 55%;
-		float: left;
 		color: white;
 	}
-	.rightimage {
+
+	div.no-space {
+		margin-left : 0;
+		margin-right : 0;
+		margin-bottom: 0;
+		margin-top : 0;
+	}
+
+	li {
 		float: left;
+		padding: 8px;
+		transition: 0.2s ease;
+		border-bottom: 0px solid white;
+	}
+
+	li:hover {
+		border-bottom: 2px solid white;
+	}
+
+	.superbig-title {
+		color : #e0e0e0;
+		font-size: 64px;
+	}
+
+	.big-title {
+		color : #393a3a;
+		font-size: 52px; 
+	}
+
+	.title {
+		color : white;
+		font-size: 46px;
+	}
+
+	.title-black {
+		color : black;
+		font-size: 46px;
+	}
+
+	.sub-title {
+		color : ;
+		font-size: 36px;
+	}
+
+	.sub-sub-title {
+		width: 50%;
+	}
+
+	.underline {
+		width: 140px;
+		border : 2px solid #51ADCF;
+	}
+
+	.section1-page {
+		margin-top : 125px;
+	}
+
+	.section1-index {
+		background-color : rgba(0, 0, 0, 0.5);
+		color : white;
+	}
+
+	.section2-index {
+		padding: 15px;
+		margin-top : 0;
+		background-color: #f4fcff;
+		color : #161616;
+	}
+
+	.section3-index {
+		background-image: url('../images/paralayang.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		color : #fff;
+	}
+
+	.section4-index {
+		margin-top : 0;
+		padding: 25px;
+	}
+
+	.section5-index {
+		color : #bfbfbf;
+		background-color: #0b2247;
+	}
+
+	.section1-galery {
+		padding: 150px;
+		background-attachment: fixed;
+		background-image: url('../images/pantai-3-warna-malang-by-rulayyy.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		/*background-position: 12px 12px;*/
+	}
+
+	.section1-tourism {
+		padding: 232px;
+		background-attachment: fixed;
+		background-image: url('../images/air-terjun-coban-rondo-2.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		/*background-position: 300px 0px;*/
+	}
+
+	.section2-tourism {
+		padding-top : 20px;
+		padding-bottom : 20px;
+	}
+
+	.section2-galery {
+		background-color: #fcfeff;
+		padding-bottom : 40px;
+	}
+	html,
+	body {
+		padding: 0;
+		margin : 0;
+		height : 100%;
+		width : 100%;
+		font-size: 100%;
+		font-family: 'Lato', sans-serif;
+	}
+
+	/* Positioning */
+	.position-left {
+		float: left;
+	}
+
+	.position-right {
+		float: right;
+	}
+
+	.txt-left {
+		text-align: left;
+	}
+
+	.txt-right {
+		text-align: right;
+	}
+
+	.txt-center {
+		text-align: center;
+		margin-left : auto;
+		margin-right: auto;
+	}
+
+	.txt-justify {
+		text-align: justify;
+	}
+
+	/* End of Positioning */
+	/* Grid System */
+	.container {
+		width : 100%;
+	}
+
+	.row {
+		width : 100%;
+		position: relative;
+	}
+
+	.row [class^="column-"], [class*=" column-"] {
+		float: left;
+		margin: 0.5rem 2%;
+  		min-height: 0.125rem;
+	}
+
+	/* Grid System without space */
+	.row-fluid [class^="columns-"], [class*=" columns-"] {
+		float: left;
+		margin: 0%;
+  		min-height: 0.125rem;
+	}
+
+	.row::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.hidden-sm {
+	  display: none;
+	}
+
+	.columns-1,
+	.columns-2,
+	.columns-3,
+	.columns-4,
+	.columns-5,
+	.columns-6,
+	.columns-7,
+	.columns-8,
+	.columns-9,
+	.columns-10,
+	.columns-11,
+	.columns-12, {
+		width: 96%;
+	}
+
+	.columns-1-sm {
+  		width: 4.33%;
+	}
+
+	.columns-2-sm {
+	  width: 12.66%;
+	}
+
+	.columns-3-sm {
+	  width: 21%;
+	}
+
+	.columns-4-sm {
+	  width: 29.33%;
+	}
+
+	.columns-5-sm {
+	  width: 37.66%;
+	}
+
+	.columns-6-sm {
+	  width: 46%;
+	}
+
+	.columns-7-sm {
+	  width: 54.33%;
+	}
+
+	.columns-8-sm {
+	  width: 62.66%;
+	}
+
+	.columns-9-sm {
+	  width: 71%;
+	}
+
+	.columns-10-sm {
+	  width: 79.33%;
+	}
+
+	.columns-11-sm {
+	  width: 87.66%;
+	}
+
+	.columns-12-sm {
+	  width: 96%;
+	}
+
+	.columns-padding {
+		padding-top : 150px;
+	}
+
+	/* End of Grid System without space */
+	.row::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.column-1,
+	.column-2,
+	.column-3,
+	.column-4,
+	.column-5,
+	.column-6,
+	.column-7,
+	.column-8,
+	.column-9,
+	.column-10,
+	.column-11,
+	.column-12, {
+		width: 96%;
+	}
+
+	.column-1-sm {
+  		width: 4.33%;
+	}
+
+	.column-2-sm {
+	  width: 12.66%;
+	}
+
+	.column-3-sm {
+	  width: 21%;
+	}
+
+	.column-4-sm {
+	  width: 29.33%;
+	}
+
+	.column-5-sm {
+	  width: 37.66%;
+	}
+
+	.column-6-sm {
+	  width: 46%;
+	}
+
+	.column-7-sm {
+	  width: 54.33%;
+	}
+
+	.column-8-sm {
+	  width: 62.66%;
+	}
+
+	.column-9-sm {
+	  width: 71%;
+	}
+
+	.column-10-sm {
+	  width: 79.33%;
+	}
+
+	.column-11-sm {
+	  width: 87.66%;
+	}
+
+	.column-12-sm {
+	  width: 94%;
+	}
+
+	/*End of Grid System*/
+	
+	/* Button */
+	.button {
+		padding : 10px;
+		color : white;
+		font-size : 14px;
+		border : 0;
+		cursor: pointer;
+		padding: 10px 20px;
+		border-radius: 5px;
+	}
+	.button-big {
+		font-size : 18px;
+		padding: 15px 30px;
+	}
+	.button-prim {
+		background-color: #3665af;
+		transition : 0.2s linear;
+	}
+	.button-prim:hover {
+		background-color: #3f70bf;
+	}
+	/* End of Button */
+
+	@media only screen and (max-width: 33.75em) {  /* 540px */
+		.container {
+		    width: 80%;
+		}
+	}
+
+	@media only screen and (max-width: 45em) {  /* 720px */
+	  .column-1-sm {
+	    width: 4.33%;
+	  }
+
+	  .column-2-sm {
+	    width: 12.66%;
+	  }
+
+	  .column-3-sm {
+	    width: 21%;
+	  }
+
+	  .column-4-sm {
+	    width: 29.33%;
+	  }
+
+	  .column-5-sm {
+	    width: 37.66%;
+	  }
+
+	  .column-6-sm {
+	    width: 46%;
+	  }
+
+	  .column-7-sm {
+	    width: 54.33%;
+	  }
+
+	  .column-8-sm {
+	    width: 62.66%;
+	  }
+
+	  .column-9-sm {
+	    width: 71%;
+	  }
+
+	  .column-10-sm {
+	    width: 79.33%;
+	  }
+
+	  .column-11-sm {
+	    width: 87.66%;
+	  }
+
+	  .column-12-sm {
+	    width: 96%;
+	  }
+
+	  .hidden-sm {
+	    display: block;
+	  }
+	}
+
+	@media only screen and (max-width: 60em) { /* 960px */
+	  .container {
+	    width: 75%;
+	    max-width: 60rem;
+	  }
+
+	  .section3 {
+	  	background : none;
+	  }
+
+	  .text-hide {
+	  	display: none;
+	  }
+	}
+
+	.visible-hide {
+		visibility: hidden;
+	}
+
+	.slideRight {
+	    visibility: visible;
+	    animation-name: slideRight;
+	    -webkit-animation-name: slideRight;
+	    animation-duration: 1.5s;
+	    -webkit-animation-duration: 1.5s;
+	    /*animation-timing-function: ease-in-out;*/
+	    /*-webkit-animation-timing-function: ease-in-out;*/
+	}
+
+	@keyframes slideRight {
+	    0% {
+	        transform: translateX(-150%);
+	    }
+	    100% {
+	        transform: translateX(0%);
+	    }
+	}
+
+	@-webkit-keyframes slideRight {
+	    0% {
+	        -webkit-transform: translateX(-150%);
+	    }
+	    100% {
+	        -webkit-transform: translateX(0%);
+	    }
+	}
+
+	.slideLeft {
+	    visibility: visible;
+	    animation-name: slideLeft;
+	    -webkit-animation-name: slideLeft;
+	    animation-duration: 1.5s;
+	    -webkit-animation-duration: 1.5s;
+	    /*animation-timing-function: ease-in-out;*/
+	    /*-webkit-animation-timing-function: ease-in-out;*/
+	}
+
+	@keyframes slideLeft {
+	    0% {
+	        transform: translateX(150%);
+	    }
+	    100% {
+	        transform: translateX(0%);
+	    }
+	}
+
+	@-webkit-keyframes slideLeft {
+	    0% {
+	        -webkit-transform: translateX(150%);
+	    }
+	    100% {
+	        -webkit-transform: translateX(0%);
+	    }
 	}

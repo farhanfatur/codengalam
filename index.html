@@ -1,394 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <link rel="icon" href="assets/images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="assets/css/jquery.bxslider.css">
-<title>Beranda - Malang Mbois</title>
-<style type="text/css">
-@import url('https://fonts.googleapis.com/css?family=Lato|Libre+Baskerville|Nanum+Gothic');
-
-	.slider {
-		margin : 0 auto;
-		width: 100%;
-		height: 300px;
-	}
-
-	.header{
-		width: 100%;
-		overflow: hidden;
-		top: 0;
-		height: 86px;
-		background-color: rgba(4, 102, 147, 0.3);
-	    z-index:  1000;
-	    position: fixed;
-	    padding-top: 16px;
-	    padding-bottom : 16px;
-	    padding-left: 24px;
-	    padding-right: 24px;
-	    display:  flex;
-	}
-
-	.section1 {
-		position: relative;
-		z-index: -1;
-	}
-
-	.link-news {
-		color : #51ADCF;
-		transition : 0.2s linear;
-	}
-
-	.link-news:hover {
-		color : #3e8fad;
-	}
-
-	/* Image */
-	.img-circle-sm {
-		width: 160px;
-		height: 140px;
-		border-radius: 50%;
-	}
-
-	.picture-1 {
-		background-image: url('assets/images/Wisata-Malang.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-	.picture-2 {
-		background-image: url('assets/images/wrapper2.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-	.picture-3 {
-		background-image: url('assets/images/pantai-3-warna-malang-by-rulayyy.jpg');
-	}
-
-	.picture-4 {
-		background-image: url('assets/images/sub-list1.jpg');
-	}
-
-	/* End of Image */
-	.img-slider-1 {
-		background : rgba(0, 0, 0);
-		padding: 320px;
-	}
-
-	.img-slider-2 {
-		background-repeat: no-repeat;
-		padding: 250px;
-	}
-
-	.clear {
-		clear: both;
-	}
-
-	.box-md {
-		margin : 0;
-		padding: 140px;
-	}
-
-	.box-sm {
-		background : green;
-		height : 200px;
-	}
-
-	.box-img-1 {
-		opacity : 0.7;
-		background-image : url('assets/images/slider2.jpg');
-		background-repeat: no-repeat;
-		transition : 0.2s linear;
-	}
-
-	.box-img-2 {
-		opacity : 0.7;
-		background-image : url('assets/images/gambar.png');
-		background-repeat: no-repeat;
-		transition : 0.2s linear;
-	}
-
-	.box-img-2:hover, .box-img-1:hover {
-		opacity: 1.0;
-	}
-
-	ul {
-		list-style: none;
-	}
-
-	.active {
-		border-bottom : 2px solid white;
-	}
-
-	a {
-		text-decoration: none;
-		color: white;
-	}
-
-	div.no-space {
-		margin-left : 0;
-		margin-right : 0;
-		margin-bottom: 0;
-		margin-top : 0;
-	}
-
-	li {
-		display: inline-block;
-		padding: 8px;
-	}
-
-	.big-title {
-		color : #393a3a;
-		font-size: 52px; 
-	}
-
-	.title {
-		color : white;
-		font-size: 46px;
-	}
-
-	.sub-title {
-		color : ;
-		font-size: 36px;
-	}
-
-	.sub-sub-title {
-		width: 50%;
-	}
-
-	.underline {
-		width: 140px;
-		border : 2px solid #51ADCF;
-	}
-
-	.section1 {
-		background-color : rgba(0, 0, 0, 0.5);
-	}
-
-	.section2 {
-		padding: 15px;
-		margin-top : 0;
-		background-color: #f4fcff;
-		color : #161616;
-	}
-
-	.section3 {
-		background-image: url('assets/images/paralayang.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
-		color : #fff;
-	}
-
-	.section4 {
-		background-color : #E8FFC1;
-		padding: 15px;
-	}
-
-	html,
-	body {
-		padding: 0;
-		margin : 0;
-		height : 100%;
-		width : 100%;
-		font-size: 100%;
-		font-family: 'Lato', sans-serif;
-	}
-
-	/* Positioning */
-	.position-left {
-		float: left;
-	}
-
-	.position-right {
-		float: right;
-	}
-
-	.txt-left {
-		text-align: left;
-	}
-
-	.txt-right {
-		text-align: right;
-	}
-
-	.txt-center {
-		text-align: center;
-		margin-left : auto;
-		margin-right: auto;
-	}
-
-	.txt-justify {
-		text-align: justify;
-	}
-
-	/* End of Positioning */
-	/* Grid System */
-	.container {
-		width : 100%;
-	}
-
-	.row {
-		width : 100%;
-		position : relative;
-	}
-
-	.row [class^="column-"], [class*=" column-"] {
-		float: left;
-		margin: 0.3rem 2%;
-  		min-height: 0.125rem;
-	}
-
-	/* Grid System without space */
-	.row-fluid [class^="columns-"], [class*=" columns-"] {
-		float: left;
-		margin: 0%;
-  		min-height: 0.125rem;
-	}
-
-	.row-fluid::after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-	.columns-1,
-	.columns-2,
-	.columns-3,
-	.columns-4,
-	.columns-5,
-	.columns-6,
-	.columns-7,
-	.columns-8,
-	.columns-9,
-	.columns-10,
-	.columns-11,
-	.columns-12, {
-		width: 96%;
-	}
-
-	.columns-1-sm {
-  		width: 4.33%;
-	}
-
-	.columns-2-sm {
-	  width: 12.66%;
-	}
-
-	.columns-3-sm {
-	  width: 21%;
-	}
-
-	.columns-4-sm {
-	  width: 29.33%;
-	}
-
-	.columns-5-sm {
-	  width: 37.66%;
-	}
-
-	.columns-6-sm {
-	  width: 46%;
-	}
-
-	.columns-7-sm {
-	  width: 54.33%;
-	}
-
-	.columns-8-sm {
-	  width: 62.66%;
-	}
-
-	.columns-9-sm {
-	  width: 71%;
-	}
-
-	.columns-10-sm {
-	  width: 79.33%;
-	}
-
-	.columns-11-sm {
-	  width: 87.66%;
-	}
-
-	.columns-12-sm {
-	  width: 96%;
-	}
-
-	.columns-padding {
-		padding-top : 150px;
-	}
-
-	/* End of Grid System without space */
-	.row::after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-	.column-1,
-	.column-2,
-	.column-3,
-	.column-4,
-	.column-5,
-	.column-6,
-	.column-7,
-	.column-8,
-	.column-9,
-	.column-10,
-	.column-11,
-	.column-12, {
-		width: 96%;
-	}
-
-	.column-1-sm {
-  		width: 4.33%;
-	}
-
-	.column-2-sm {
-	  width: 12.66%;
-	}
-
-	.column-3-sm {
-	  width: 21%;
-	}
-
-	.column-4-sm {
-	  width: 29.33%;
-	}
-
-	.column-5-sm {
-	  width: 37.66%;
-	}
-
-	.column-6-sm {
-	  width: 46%;
-	}
-
-	.column-7-sm {
-	  width: 54.33%;
-	}
-
-	.column-8-sm {
-	  width: 62.66%;
-	}
-
-	.column-9-sm {
-	  width: 71%;
-	}
-
-	.column-10-sm {
-	  width: 79.33%;
-	}
-
-	.column-11-sm {
-	  width: 87.66%;
-	}
-
-	.column-12-sm {
-	  width: 94%;
-	}
-	/*End of Grid System*/
-</style>
-	<title></title>
+	<title>Beranda - Malang Mbois</title>
 </head>
 <body>
 	<div class="container">
@@ -400,9 +16,9 @@
 					</div>
 					<div class="position-right">
 						<ul class="list">
-							<li class="active"><a href="#">Beranda</a></li>
-							<li><a href="#">Galeri</a></li>
-							<li><a href="#">Objek Wisata</a></li>
+							<li class="active"><a href="index.html">Beranda</a></li>
+							<li><a href="galery.html">Galeri</a></li>
+							<li><a href="tourism.html">Objek Wisata</a></li>
 							<li><a href="#">Profil</a></li>
 						</ul>
 					</div>
@@ -410,96 +26,123 @@
 			</div>
 		</div>
 		<div class="clear"></div>
-		<div class="section1">
+		<div class="section1-index">
 			<div class="slider1">
 				<div class="img-slider-1 picture-1">
 					<h2 class="title txt-center">Sub Judul 1</h2>
+					<p class="txt-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<div class="txt-center"><button class="button button-prim button-big" type="button" onclick="window.location.href='pages/simple-detail-page.html'">Explore</button></div>
 				</div>
 				<div class="img-slider-1 picture-2">
 					<h2 class="title txt-center">Sub Judul 2</h2>
+					<p class="txt-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<div class="txt-center"><button class="button button-prim button-big" type="button">Explore</button></div>
 				</div>
 				<div class="img-slider-1 picture-1">
 					<h2 class="title txt-center">Sub Judul 3</h2>
+					<p class="txt-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<div class="txt-center"><button class="button button-prim button-big" type="button">Explore</button></div>
 				</div>
 			</div>
 		</div>
 		<div class="clear"></div>
-		<div class="section2">
+		<div class="section2-index">
 			<div class="row">
-				<div class="column-8-sm">
-					<h1 class="sub-title">Top 3 Tempat Wisata Malang</h1>
-					<div class="underline"></div>
-				</div>
-				<div class="row">
-						<div class="column-6-sm">
-							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat.</span>
-						</div>
-					</div>
-				<div class="column-6-sm">
-					<div class="row">
-						<div class="column-4-sm">
-							<img src="assets/images/sub-list1.jpg" class="img-circle-sm">
-						</div>
-						<div class="column-8-sm">
-							<h3 class="sub-sub-title">Sub Sub Judul 1</h3>
-							<div class="underline"></div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.. </p>
-							<a href="#" class="link-news">Lihat Selengkapnya &raquo;</a>
-						</div>
+				<div class="column-12-sm">
+					<div class="column-8-sm">
+						<h1 class="sub-title">Top 3 Tempat Wisata Malang</h1>
+						<div class="underline"></div>
 					</div>
 					<div class="row">
-						<div class="column-4-sm">
-							<img src="assets/images/sub-list1.jpg" class="img-circle-sm">
+							<div class="column-6-sm">
+								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat.</span>
+							</div>
 						</div>
-						<div class="column-8-sm">
-							<h3 class="sub-sub-title">Sub Sub Judul 1</h3>
-							<div class="underline"></div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.. </p>
-							<a href="#" class="link-news">Lihat Selengkapnya &raquo;</a>
+					<div class="column-6-sm">
+						<div class="row">
+							<div class="column-4-sm">
+								<img src="assets/images/sub-list1.jpg" class="img-circle-sm">
+							</div>
+							<div class="column-8-sm">
+								<h3 class="sub-sub-title">Sub Sub Judul 1</h3>
+								<div class="underline"></div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.. </p>
+								<a href="pages/simple-detail-page.html" class="link-news">Lihat Selengkapnya &raquo;</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="column-4-sm">
+								<img src="assets/images/sub-list1.jpg" class="img-circle-sm">
+							</div>
+							<div class="column-8-sm">
+								<h3 class="sub-sub-title">Sub Sub Judul 1</h3>
+								<div class="underline"></div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.. </p>
+								<a href="#" class="link-news">Lihat Selengkapnya &raquo;</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="column-4-sm">
+								<img src="assets/images/sub-list1.jpg" class="img-circle-sm">
+							</div>
+							<div class="column-8-sm">
+								<h3 class="sub-sub-title">Sub Sub Judul 1</h3>
+								<div class="underline"></div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.. </p>
+								<a href="#" class="link-news">Lihat Selengkapnya &raquo;</a>
+							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="column-4-sm">
-							<img src="assets/images/sub-list1.jpg" class="img-circle-sm">
+					<div class="column-6-sm">
+						<div class="slider2">
+							<div class="img-slider-2 picture-3" title="Indahnya Pantai 3 Warna"></div>
+							<div class="img-slider-2 picture-4"></div>
+							<div class="img-slider-2 picture-3"></div>
 						</div>
-						<div class="column-8-sm">
-							<h3 class="sub-sub-title">Sub Sub Judul 1</h3>
-							<div class="underline"></div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.. </p>
-							<a href="#" class="link-news">Lihat Selengkapnya &raquo;</a>
-						</div>
-					</div>
-				</div>
-				<div class="column-6-sm">
-					<div class="slider2">
-						<div class="img-slider-2 picture-3" title="Indahnya Pantai 3 Warna"></div>
-						<div class="img-slider-2 picture-4"></div>
-						<div class="img-slider-2 picture-3"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="clear"></div>
-		<div class="section3">
+		<div class="section3-index">
 			<div class="row">
+				<div class="column-12-sm">
 				<div class="column-6-sm">
 					<div class="row">
-						<div class="column-6 box-md box-img-1">
+						<div class="column-5 box-md box-img-1">
+							<div style="position: absolute; margin-top: 0;border-bottom: 1px solid black;">
+								asd
+							</div>
+						</div>
+						<div class="column-5 box-md box-img-2">
 							
 						</div>
-						<div class="column-6 box-md box-img-2">
+						<div class="column-5 box-md box-img-2">
 							
 						</div>
-						<div class="column-6 box-md box-img-2">
-							
-						</div>
-						<div class="column-6 box-md box-img-1">
+						<div class="column-5 box-md box-img-1">
 							
 						</div>
 					</div>
@@ -508,8 +151,8 @@
 					<div class="row">
 						<div class="columns-padding">
 							<div class="column-12-sm">
-								<h1 class="title txt-center">Tempat Wisata baru</h1>
-								<p class="txt-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								<h1 class="title txt-center text-hide">Tempat Wisata baru</h1>
+								<p class="txt-center text-hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -519,43 +162,92 @@
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 		</div>
-		<div class="section4">
+		<div class="clear"></div>
+		<div class="section4-index">
 			<div class="row">
-				<div class="slider3">
-					<div>
-						<div class="column-3-sm box-sm">Kab Malang</div>
-						<div class="column-3-sm box-sm">Kab Malang</div>
-						<div class="column-3-sm box-sm">Kab Malang</div>
-						<div class="column-3-sm box-sm">Kab Malang</div>
-					</div>
-					<div>
-						<div class="column-3-sm box-sm">Kab Malang 2</div>
-						<div class="column-3-sm box-sm">Kab Malang 2</div>
-						<div class="column-3-sm box-sm">Kab Malang 2</div>
-						<div class="column-3-sm box-sm">Kab Malang 2</div>
-					</div>
-					<div>
-						<div class="column-3-sm box-sm">Kab Malang 3</div>
-						<div class="column-3-sm box-sm">Kab Malang 3</div>
-						<div class="column-3-sm box-sm">Kab Malang 3</div>
-						<div class="column-3-sm box-sm">Kab Malang 3</div>
+				<div class="column-12-sm">
+					<div class="slider3">
+						<div class="row">
+							<div class="column-3-sm box-sm">
+								<img src="assets/images/Coban_Rondo.jpg">
+							</div>
+							<div class="column-3-sm box-sm">
+								<img src="assets/images/Coban_Rondo.jpg">
+							</div>
+							<div class="column-3-sm box-sm">
+								<img src="assets/images/Coban_Rondo.jpg">
+							</div>
+							<div class="column-3-sm box-sm">
+								<img src="assets/images/Coban_Rondo.jpg">
+							</div>
+						</div>
+						<div class="row">
+							<div class="column-3-sm box-sm">
+								<img src="assets/images/air-terjun-coban-rondo-2.jpg">
+							</div>
+							<div class="column-3-sm box-sm">
+								<img src="assets/images/air-terjun-coban-rondo-2.jpg">
+							</div>
+							<div class="column-3-sm box-sm">
+								<img src="assets/images/air-terjun-coban-rondo-2.jpg"></div>
+							<div class="column-3-sm box-sm">
+								<img src="assets/images/air-terjun-coban-rondo-2.jpg">
+							</div>
+						</div>
+						<div class="row">
+							<div class="column-3-sm box-sm">Kab Malang 3</div>
+							<div class="column-3-sm box-sm">Kab Malang 3</div>
+							<div class="column-3-sm box-sm">Kab Malang 3</div>
+							<div class="column-3-sm box-sm">Kab Malang 3</div>
+						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="section5-index">
 			<div class="row">
-				<div class="column-7-sm">
-					<h1 class="big-title">Malang Tour</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<button type="button" class="button button-prim">Cari Lokasi</button>
+				<div class="column-12-sm">
+					<div class="column-4-sm">
+						<h2 class="sub-title">About</h2>
+						<div class="underline"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div class="column-4-sm">
+						<h2 class="sub-title">Link</h2>
+						<div class="underline"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div class="column-4-sm">
+						<h2 class="sub-title">Contact</h2>
+						<div class="underline"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
 				</div>
+			</div>
+		</div>
+		<div class="preloader">
+			<div class="loading">
+				<img src="assets/images/preloader-page.gif">
 			</div>
 		</div>
 	</div>
@@ -589,8 +281,7 @@
 			stopAutoOnClick: true,
 			pager: true,
 			responsive : true,
-			caption : true,
-			slideWidth : 700
+			caption : true
 		});
 
 		$(".slider3").bxSlider({
@@ -598,7 +289,10 @@
 			stopAutoOnClick: true,
 			pager: true,
 			responsive : true,
+			captions : true
 		});
+
+		$(".preloader").fadeOut();
 	});
 </script>
 </html>

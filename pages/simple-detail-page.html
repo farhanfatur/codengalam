@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+<link rel="icon" href="../assets/images/favicon.ico">
+	<title>Isien Dewe - Malang Mbois</title>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="row">
+				<div class="column-12-sm">
+					<div class="position-left">
+						<img src="../assets/images/logo2.png">
+					</div>
+					<div class="position-right">
+						<ul class="list">
+							<li><a href="index.html">Beranda</a></li>
+							<li><a href="galery.html">Galeri</a></li>
+							<li class="active"><a href="tourism.html">Objek Wisata</a></li>
+							<li><a href="#">Profil</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section1-page">
+			<div class="row">
+				<div class="column-12-sm">
+					<div class="column-12-sm">
+						<img src="../assets/images/maxresdefault.jpg" class="img-page">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../assets/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(window).scroll(function(){
+		  	var scroll = $(window).scrollTop();
+			  if (scroll > 250) {
+			    $(".header").css("background" , "#025277")  ;	
+			  }
+			  else{
+			  	$(".header").css("background" , "rgba(4, 102, 147, 0.3)")
+			  				.css("box-shadow","0 2px 4px 1px rgba(0, 0, 0, 0.15)")
+			  				.css("transition", "0.2s linear")
+			  				.css("max-width", "96.5%;");
+			  }
+		});
+	});
+</script>
+</html>
