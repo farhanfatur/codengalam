@@ -29,7 +29,7 @@
 		<div class="section2-tourism">
 			<div class="row">
 				<div class="column-12-sm">
-					<div class="column-7-sm animation-test visible-hide">
+					<div class="column-7-sm animation-right visible-hide">
 						<h2 class="subtitle">Sub Judul 1</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -39,17 +39,17 @@
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						<button type="button" class="button button-prim">Detail</button>
 					</div>
-					<div class="column-5-sm animation-test visible-hide">
+					<div class="column-5-sm animation-right visible-hide">
 						<img src="assets/images/gambar.png" alt="HTML5" class="img-tourism">
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="column-12-sm">
-					<div class="column-5-sm animation-test visible-hide">
+					<div class="column-5-sm animation-left visible-hide">
 						<img src="assets/images/gambar.png" alt="HTML5" class="img-tourism">
 					</div>
-					<div class="column-7-sm animation-test visible-hide">
+					<div class="column-7-sm animation-left visible-hide">
 						<h2 class="subtitle">Sub Judul 2</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -63,7 +63,7 @@
 			</div>
 			<div class="row">
 				<div class="column-12-sm">
-					<div class="column-7-sm animation-test visible-hide">
+					<div class="column-7-sm animation-right visible-hide">
 						<h2 class="subtitle">Sub Judul 3</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -73,17 +73,17 @@
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						<button type="button" class="button button-prim">Detail</button>
 					</div>
-					<div class="column-5-sm animation-test visible-hide">
+					<div class="column-5-sm animation-right visible-hide">
 						<img src="assets/images/gambar.png" alt="HTML5" class="img-tourism">
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="column-12-sm">
-					<div class="column-5-sm animation-test visible-hide">
+					<div class="column-5-sm animation-left visible-hide">
 						<img src="assets/images/gambar.png" alt="HTML5" class="img-tourism">
 					</div>
-					<div class="column-7-sm animation-test visible-hide">
+					<div class="column-7-sm animation-left visible-hide">
 						<h2 class="subtitle">Sub Judul 4</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -99,7 +99,7 @@
 		<div class="section5-index">
 			<div class="row">
 				<div class="column-12-sm">
-					<div class="column-4-sm">
+					<div class="column-4-sm animation-top visible-hide">
 						<h2 class="sub-title">About</h2>
 						<div class="underline"></div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -109,7 +109,7 @@
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
-					<div class="column-4-sm">
+					<div class="column-4-sm animation-top visible-hide">
 						<h2 class="sub-title">Link</h2>
 						<div class="underline"></div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -119,7 +119,7 @@
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
-					<div class="column-4-sm">
+					<div class="column-4-sm animation-top visible-hide">
 						<h2 class="sub-title">Contact</h2>
 						<div class="underline"></div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -144,7 +144,7 @@
 	$(document).ready(function () {
 		$(window).scroll(function(){
 		  	var scroll = $(window).scrollTop();
-			  if (scroll > 250) {
+			  if (scroll > 150) {
 			    $(".header").css("background" , "#025277")  ;	
 			  }
 			  else{
@@ -154,15 +154,36 @@
 			  				.css("max-width", "96.5%;");
 			  }
 
-			$('.animation-test').each(function () {
+			$('.animation-right').each(function () {
 		        var imagePos = $(this).offset().top;
 		        var imageHeight = $(this).height();
 		        var topOfWindow = $(window).scrollTop();
 		        console.log(topOfWindow);
 		        if (imagePos < topOfWindow+400) {
-		            $(this).addClass("slideRight");
+		            $(this).addClass("slideRight").fadeIn()
 		        }
 		    });
+
+			$('.animation-left').each(function () {
+		        var imagePos = $(this).offset().top;
+		        var imageHeight = $(this).height();
+		        var topOfWindow = $(window).scrollTop();
+		        console.log(topOfWindow);
+		        if (imagePos < topOfWindow+400) {
+		            $(this).addClass("slideLeft").fadeIn()
+		        }
+		    });
+
+			$('.animation-top').each(function () {
+		        var imagePos = $(this).offset().top;
+		        var imageHeight = $(this).height();
+		        var topOfWindow = $(window).scrollTop();
+		        console.log(topOfWindow);
+		        if (imagePos < topOfWindow+400) {
+		            $(this).addClass("slideTop").fadeIn()
+		        }
+		    });
+
 		});
 			$(".preloader").fadeOut();
 	});

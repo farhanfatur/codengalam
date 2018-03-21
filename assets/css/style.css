@@ -31,6 +31,11 @@
 		position: relative;
 	}
 
+	#map {
+
+		width: 1250px;
+		height: 500px;
+	}
 
 	.link-news {
 		color : #51ADCF;
@@ -58,6 +63,10 @@
 		transform : translate(-50%, -50%);
 	}
 
+	.font-size-5 {
+		font-size: 16px;
+	}
+
 	/* Image */
 	.img-circle-sm {
 		width: 160px;
@@ -76,6 +85,11 @@
 
 	.img-page {
 		width: 1250px;
+	}
+
+	.img-sm {
+		width : 170px;
+		height : 120px;
 	}
 
 	.img-tourism {
@@ -228,7 +242,10 @@
 	}
 
 	.section1-page {
-		margin-top : 125px;
+		background-image: url('../images/maxresdefault.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 200px;
 	}
 
 	.section1-index {
@@ -241,6 +258,11 @@
 		margin-top : 0;
 		background-color: #f4fcff;
 		color : #161616;
+	}
+
+	.section2-page {
+		color : #202020; 
+		font-size: 20px;
 	}
 
 	.section3-index {
@@ -305,6 +327,12 @@
 
 	.position-right {
 		float: right;
+	}
+
+	.position-absolute-page {
+		position: absolute;
+		top : 0;
+		padding : 300px 530px;
 	}
 
 	.txt-left {
@@ -612,9 +640,11 @@
 	@keyframes slideRight {
 	    0% {
 	        transform: translateX(-150%);
+	        transition:  opacity(0);
 	    }
 	    100% {
 	        transform: translateX(0%);
+	        transition : opacity(1.0);
 	    }
 	}
 
@@ -652,5 +682,33 @@
 	    }
 	    100% {
 	        -webkit-transform: translateX(0%);
+	    }
+	}
+
+	.slideTop {
+	    visibility: visible;
+	    animation-name: slideTop;
+	    -webkit-animation-name: slideTop;
+	    animation-duration: 1.5s;
+	    -webkit-animation-duration: 1.5s;
+	    /*animation-timing-function: ease-in-out;*/
+	    /*-webkit-animation-timing-function: ease-in-out;*/
+	}
+
+	@keyframes slideTop {
+	    0% {
+	        transform: translateY(150%);
+	    }
+	    100% {
+	        transform: translateY(0%);
+	    }
+	}
+
+	@-webkit-keyframes slideTop {
+	    0% {
+	        -webkit-transform: translateY(150%);
+	    }
+	    100% {
+	        -webkit-transform: translateY(0%);
 	    }
 	}
