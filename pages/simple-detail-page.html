@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/jquery.bxslider.css">
 <link rel="icon" href="../assets/images/favicon.ico">
 	<title>Isien Dewe - Malang Mbois</title>
 </head>
@@ -15,8 +16,8 @@
 					</div>
 					<div class="position-right">
 						<ul class="list">
-							<li><a href="index.html">Beranda</a></li>
-							<li><a href="galery.html">Galeri</a></li>
+							<li><a href="../index.html">Beranda</a></li>
+							<li><a href="../galery.html">Galeri</a></li>
 							<li class="active"><a href="tourism.html">Objek Wisata</a></li>
 							<li><a href="#">Profil</a></li>
 						</ul>
@@ -24,7 +25,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="section1-page">
+		<div class="section1-page-1">
 		</div>
 		<div class="section2-page">
 			<div class="row">
@@ -59,12 +60,48 @@
 					</div>
 				</div>
 			</div>
+			<div class="row">
+				<div class="column-12-sm">
+					<div class="row">
+						<div class="column-6-sm">
+							<h1 class="title-black animation-right visible-hide">Foto Lainya </h1>
+							<div class="underline animation-right visible-hide"></div>
+						</div>
+					</div>
+					<div class="column-12-sm animation-right visible-hide">
+						<div class="slider-page-1">
+							<div class="row">
+								<div class="column-4-sm ">
+									<img class="zoom_5" src="../assets/images/small/image1.png"  data-zoom-image="../assets/images/large/image1.jpg">
+								</div>
+								<div class="column-4-sm ">
+									<img class="zoom_5" src="../assets/images/small/image1.png"  data-zoom-image="../assets/images/large/image1.jpg">
+								</div>
+								<div class="column-4-sm ">
+									<img class="zoom_5" src="../assets/images/small/image1.png"  data-zoom-image="../assets/images/large/image1.jpg">
+								</div>
+							</div>
+							<div class="row">
+								<div class="column-4-sm ">
+									<img class="zoom_6" src="../assets/images/small/image1.png"  data-zoom-image="../assets/images/large/image2.jpg">
+								</div>
+								<div class="column-4-sm ">
+									<img class="zoom_6" src="../assets/images/small/image1.png"  data-zoom-image="../assets/images/large/image2.jpg">
+								</div>
+								<div class="column-4-sm ">
+									<img class="zoom_6" src="../assets/images/small/image1.png"  data-zoom-image="../assets/images/large/image2.jpg">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="clear"></div>
 		<div class="section3-page">
 			<div class="row">
 				<div class="column-12-sm">
-					<div class="column-12-sm">
+					<div class="column-12-sm animation-left visible-hide">
 						<div id="map"></div>
 					</div>
 				</div>
@@ -158,6 +195,8 @@
 </body>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMraBes4an_Ih5G4W0NNO0CgW5lFnW6f0&callback=myMap"></script>
 <script type="text/javascript" src="../assets/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.elevatezoom.js"></script>
 <script type="text/javascript">
 	function myMap() {
 		var mapOptions = {
@@ -170,6 +209,18 @@
 
 
 	$(document).ready(function () {
+
+		$(".zoom_5").elevateZoom({
+			zoomType	: "inner",
+  			cursor		: "crosshair"
+		});
+
+		$(".zoom_6").elevateZoom({
+			 zoomType				: "lens",
+			  lensShape : "round",
+			  lensSize    : 500
+		});
+
 		$(window).scroll(function(){
 		  	var scroll = $(window).scrollTop();
 			  if (scroll > 150) {
@@ -212,6 +263,15 @@
 		    });
 		});
 
+
+		$(".slider-page-1").bxSlider({
+			mode : 'fade',
+			auto: false,
+			stopAutoOnClick: true,
+			pager: true,
+			responsive : true,
+			captions : true
+		});
 
 		$(".preloader").fadeOut();
 	});

@@ -241,7 +241,7 @@
 		border : 2px solid #51ADCF;
 	}
 
-	.section1-page {
+	.section1-page-1 {
 		background-image: url('../images/maxresdefault.jpg');
 		background-size: cover;
 		background-attachment: fixed;
@@ -548,6 +548,10 @@
 	}
 	/* End of Button */
 
+	#gallery_01 img{border:2px solid white;}
+ 
+ 	.active img{border:2px solid #333 !important;}
+
 	@media only screen and (max-width: 33.75em) {  /* 540px */
 		.container {
 		    width: 80%;
@@ -640,7 +644,7 @@
 	@keyframes slideRight {
 	    0% {
 	        transform: translateX(-150%);
-	        transition:  opacity(0);
+	        transition:  opacity ;
 	    }
 	    100% {
 	        transform: translateX(0%);
