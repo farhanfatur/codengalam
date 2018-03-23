@@ -46,6 +46,10 @@
 		color : #3e8fad;
 	}
 
+	.article-profile {
+		text-indent: 1cm;
+	}
+
 	.preloader {
 		position: fixed;
 		top : 0;
@@ -248,7 +252,12 @@
 		padding: 200px;
 	}
 
-	
+	.section1-profile {
+		background-image: url('../images/profile-image.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 200px;
+	}
 
 	.section1-index {
 		background-color : rgba(0, 0, 0, 0.5);
