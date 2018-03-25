@@ -19,7 +19,7 @@
 							<li class="active"><a href="index.html">Beranda</a></li>
 							<li><a href="galery.html">Galeri</a></li>
 							<li><a href="tourism.html">Objek Wisata</a></li>
-							<li><a href="#">Profil</a></li>
+							<li><a href="profile.html">Profil</a></li>
 						</ul>
 					</div>
 				</div>
@@ -65,19 +65,16 @@
 		<div class="section2-index">
 			<div class="row">
 				<div class="column-12-sm">
-					<div class="column-8-sm">
+					<div class="column-8-sm animation-right visible-hide">
 						<h1 class="sub-title">Top 3 Tempat Wisata Malang</h1>
 						<div class="underline"></div>
 					</div>
 					<div class="row">
-							<div class="column-6-sm">
-								<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.</span>
-							</div>
+						<div class="column-6-sm animation-right visible-hide">
+							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.</span>
 						</div>
-					<div class="column-6-sm">
+					</div>
+					<div class="column-6-sm animation-right visible-hide">
 						<div class="row">
 							<div class="column-4-sm">
 								<img src="assets/images/sub-list1.jpg" class="img-circle-sm">
@@ -115,7 +112,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column-6-sm">
+					<div class="column-6-sm animation-left visible-hide">
 						<div class="slider2">
 							<div class="img-slider-2 picture-3" title="Indahnya Pantai 3 Warna"></div>
 							<div class="img-slider-2 picture-4"></div>
@@ -129,7 +126,7 @@
 		<div class="section3-index">
 			<div class="row">
 				<div class="column-12-sm">
-				<div class="column-6-sm">
+				<div class="column-6-sm animation-right visible-hide">
 					<div class="row">
 						<div class="column-5 box-md box-img-1">
 							<div style="position: absolute; margin-top: 0;border-bottom: 1px solid black;">
@@ -147,7 +144,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="column-6-sm">
+				<div class="column-6-sm animation-left visible-hide">
 					<div class="row">
 						<div class="columns-padding">
 							<div class="column-12-sm">
@@ -267,6 +264,27 @@
 			  				.css("transition", "0.2s linear")
 			  				.css("max-width", "96.5%;");
 			  }
+
+			  $('.animation-right').each(function () {
+		        var imagePos = $(this).offset().top;
+		        var imageHeight = $(this).height();
+		        var topOfWindow = $(window).scrollTop();
+		        console.log(topOfWindow);
+		        if (imagePos < topOfWindow+400) {
+		            $(this).addClass("slideRight").fadeIn()
+		        }
+		    });
+
+			$('.animation-left').each(function () {
+		        var imagePos = $(this).offset().top;
+		        var imageHeight = $(this).height();
+		        var topOfWindow = $(window).scrollTop();
+		        console.log(topOfWindow);
+		        if (imagePos < topOfWindow+400) {
+		            $(this).addClass("slideLeft").fadeIn()
+		        }
+		    });
+
 		  });
 		$(".slider1").bxSlider({
 			mode : 'fade',
