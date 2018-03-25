@@ -40,6 +40,10 @@
 			</div>
 		</div>
 			<div class="row">
+				<div class="column-12-sm" id="tampilData">
+				</div>
+			</div>
+			<div class="row">
 				<div class="column-12-sm">
 					<div class="column-4-sm">
 						<div class="img-caption-galery">
@@ -186,6 +190,8 @@
 			  }
 		  });
 
+		  // loadMore();
+
 		$(".slider1").bxSlider({
 			mode : 'fade',
 			auto: true,
@@ -212,6 +218,29 @@
 		});
 
 		$(".preloader").fadeOut();
+
+		
+
+		// function loadMore() {
+		// 	var data = [
+		// 	{title:'ini title', image: 'assets/images/gambar.png',description: 'deskripsi singkat'},
+		// 	{title:'ini title', image: 'assets/images/gambar.png',description: 'deskripsi singkat'},
+		// 	{title:'ini title', image: 'assets/images/gambar.png',description: 'deskripsi singkat'},
+		// 	{title:'ini title', image: 'assets/images/gambar.png',description: 'deskripsi singkat'},
+		// 	{title:'ini title', image: 'assets/images/gambar.png',description: 'deskripsi singkat'},
+		// 	{title:'ini title', image: 'assets/images/gambar.png',description: 'deskripsi singkat'},
+		// 	{title:'ini title', image: 'assets/images/gambar.png',description: 'deskripsi singkat'},
+		// 	{title:'ini title', image: 'assets/images/gambar.png',description: 'deskripsi singkat'},
+		// 	{title:'ini title', image: 'assets/images/gambar.png',description: 'deskripsi singkat'},
+		// 	{title:'ini title', image: 'assets/images/gambar.png',description: 'deskripsi singkat'},
+		// 	{title:'ini title', image: 'assets/images/gambar.png',description: 'deskripsi singkat'},
+		// 	{title:'ini title', image: 'assets/images/gambar.png',description: 'deskripsi singkat'},
+		// ];
+
+		// $.each(data.slice(0,9), function (i, data) {
+		// 	$("#tampilData").append("<div class='column-4-sm'><div class='img-galery'><img src='"+data.image+"' class='img-galery'><div class='img-overlay'><div class='footer-overlay'><p>"+data.description+"</p></div></div></div></div>");
+		// 	});
+		// }
 
 		// $(".img-caption-galery").mouseenter(function () {
 
