@@ -27,69 +27,8 @@
 		<div class="clear"></div>
 		<div class="section1-tourism"></div>
 		<div class="section2-tourism">
-			<div class="row">
-				<div class="column-12-sm">
-					<div class="column-7-sm animation-right visible-hide">
-						<h2 class="sub-title">Sub Judul 1</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur.</p>
-						<button type="button" class="button button-prim">Detail</button>
-					</div>
-					<div class="column-5-sm animation-right visible-hide">
-						<img src="assets/images/gambar.png" alt="HTML5" class="img-tourism">
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column-12-sm">
-					<div class="column-5-sm animation-left visible-hide">
-						<img src="assets/images/gambar.png" alt="HTML5" class="img-tourism">
-					</div>
-					<div class="column-7-sm animation-left visible-hide">
-						<h2 class="sub-title">Sub Judul 2</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur.</p>
-						<button type="button" class="button button-prim">Detail</button>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column-12-sm">
-					<div class="column-7-sm animation-right visible-hide">
-						<h2 class="sub-title">Sub Judul 3</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur.</p>
-						<button type="button" class="button button-prim">Detail</button>
-					</div>
-					<div class="column-5-sm animation-right visible-hide">
-						<img src="assets/images/gambar.png" alt="HTML5" class="img-tourism">
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column-12-sm">
-					<div class="column-5-sm animation-left visible-hide">
-						<img src="assets/images/gambar.png" alt="HTML5" class="img-tourism">
-					</div>
-					<div class="column-7-sm animation-left visible-hide">
-						<h2 class="sub-title">Sub Judul 4</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur.</p>
-						<button type="button" class="button button-prim">Detail</button>
-					</div>
-				</div>
+			<div id="list-article">
+				
 			</div>
 		</div>
 		<div class="section5-index">
@@ -182,6 +121,154 @@
 
 		});
 			$(".preloader").fadeOut();
+			paginate(0, 5);
 	});
+
+	function paginate(start, finish) {
+		var data = [
+		{
+			title : 'Alun Alun Malang',
+			description : 'Alun Alun Kota Malang - alun-alun ini terletak di jalan Merdeka atau depan Masjid Agung Jami’ yang biasanya disebut dengan AlunAlun Kota Malang atau Alun Alun Merdeka atau Alun-Alun Jami’.Alun-AlunKota Malang dibangun pada tahun 1882 dan merupakan menjadi tempatberkumpulnya warga serta tempat rekreasi yang seru bagi...',
+			image : ' assets/images/alunalun.jpg',
+			url : 'pages/alun-alun.html'
+		},
+
+		{
+			title : 'Batu Flowe Garden',
+			description : 'Batu Flower Garden terletak di bibir Bukit Bulu di area Coban Rais, tepatnya di atas bukit Coban Rais. Ya sesuai namanya, spot keren ini merupakan kebun bunga. Keunikannya adalah Lokasi Batu flower Garden ini berada di bibir bukit. Aneka tanaman bunga ditanam dan bisa menjadi spot selfie keren terutama bagi cewek cewek yang suka bunga...',
+			image : 'assets/images/garden-flower.jpg',
+			url : 'pages/batu-flower-garden.html'
+		},
+
+		{
+			title : 'Budug Asu',
+			description : 'Awalnya, Budug Asu Malang hanya digunakan oleh kalangan motocross dan offroad sebagai jalur utama di kaki Gunung Arjuna. Namun, kini berubah menjadi tempat wisata nan indah dan instagrammable.Pemandangan di Bukit Bodog Asu sungguh tak perlu diragukan lagi, karena kamu bisa melihat...',
+			image : 'assets/images/budug-asu.jpg',
+			url : 'pages/budug-asu.html'
+		},
+
+		{
+			title : 'Cemoro Lawang',
+			description : 'Cemoro Lawang mungkin hanya memiliki predikat sebagai pintu gerbang menuju kawasan Bromo. Berada di ketinggian 2200 mdpl membuat Cemoro Lawng menjadi salah satu desa yang berada di ketinggian dan memiliki view yang sangat memukau. Berkat pemandangan yang sangat memukau, akhirnya banyak juga yang menyebutkan jika keindahan Cemoro Lawang itu begitu...',
+			image : 'assets/images/cemoro-lawang.jpg',
+			url : 'pages/cemoro-lawang.html'
+		},
+
+		{
+			title : 'Coban Glotak',
+			description : 'Air Terjun Coban Glotak ini adalah air terjun di Malang yang memiliki ketinggian sekitar 100 meter. Lokasinya sendiri berada di lereng Gunung Kawi. Karena itu, Lingkungan di coban ini bisa dibilang masih sangat alami. Selain air terjun ini sebenarnya ada 7 air terjun lain. Namun, Air Terjun Coban Glotak ini merupakan coban yang berada di urutan terbawah dari 7 coban...',
+			image : 'assets/images/coban-glotak.jpg',
+			url : 'pages/coban-glotak.html'
+		},
+
+		{
+			title : 'Coban Rondo',
+			description : 'Air terjun yang berada di Jl. Coban Rondo, Pandesari, Pujon, Malang, Jawa Timur ini sangat popular di kalangan wisatawan domestic dan mancanegara ini bersumber dari mata air Cemoro Dudo dengan tinggi tidak kurang dari 84 meter. Nuansa keindahan dan lingkungannya yang masih alami membalut suasana air terjun yang nampak asri diseputar air terjun tersebut. Pengunjung...',
+			image : 'assets/images/Coban_Rondo.jpg',
+			url : 'pages/coban-rondo.html'
+		},
+
+		{
+			title : 'Goa Pinus',
+			description : 'Goa Pinus sedikit berbeda dari goa-goa di Malang, selain lokasinya yang berada di tengah-tengah hutan, Goa kece ini  tak memiliki stalaktit dan stalakmit seperti goa pada umumnya. Awalnya, Goa Pinus merupakan tempat penambangan pasir. Karena sudah  sudah lama ditinggalkan, maka penduduk setempat...',
+			image : 'assets/images/goa-pinus.jpg',
+			url : 'pages/goa-pinus.html'
+		},
+
+		{
+			title : 'Gunung Bromo',
+			description : 'Gunung Bromo merupakan destinasi wisata Malang yang terindah dan tersering disambangi oleh banyak wisatawan, para pendaki yang pastinya wajib Dolaners buktikan keindahan viewnya. Di Gunung berapi yang masih aktif ini tidak ada istilah sepi dari para wisatawan karena pesona pemandangan ngarai serta lembah yang diliputi hamparan pasir nan luas atau kaldera...',
+			image : 'assets/images/bromo.jpg',
+			url : 'pages/gunung-bromo.html'
+		},
+
+		{
+			title : 'Kedung Jembar',
+			description : 'Surga yang tersembunyi dari bumi Donomulyo, Air terjun dengan bentuk berundak, diguyur dengan air jernih sebening mata air dengan keunikan yang indah dipandang mata serta lokasi luas dan lega sehingga mampu menampung banyak wisatawan hadir disini menikmati keindahan alam.Daya tarik keindahan alam yang masih alami dan tempatnya yang luas menjadi daya tarik utama Wisata Kedung Jembar Malang. Panorama pemandangan mirip Green Canyon ditambah...',
+			image : 'assets/images/kedung-jembar.jpg',
+			url : 'pages/kedung-jembar.html'
+		},
+
+		{
+			title : 'Kondang Merak',
+			description : 'Surga yang tersembunyi dari bumi Donomulyo, Air terjun dengan bentuk berundak, diguyur dengan air jernih sebening mata air dengan keunikan yang indah dipandang mata serta lokasi luas dan lega sehingga mampu menampung banyak wisatawan hadir disini menikmati keindahan alam.Daya tarik keindahan alam yang masih alami dan tempatnya yang luas menjadi daya tarik utama Wisata Kedung Jembar Malang. Panorama pemandangan mirip Green Canyon ditambah...',
+			image : 'assets/images/kedung-jembar.jpg',
+			url : 'pages/kedung-jembar.html'
+		},
+
+		{
+			title : 'Lembah Teletubbies',
+			description : 'Awalnya padang savanna dengan kemiripannya seperti di daratan tinggi New Zealand ini memiliki nama Lembah Jemplang. Namun berjalannya waktu, meniru dari serial anak-anak di televisi, hamparan layaknya karpet hijau yang hidup inipun lebih populer disebut Lembah Teletubbies. Berada di area wisata Gunung Bromo, Lembah Teletubbies berada di sebelah selatan kawah Bromo. Jadi untuk Dolaners yang berkunjung ke Gunung yang pendakiannya berupa...',
+			image : 'assets/images/Lembah-Teletubbies.jpg',
+			url : 'pages/lembah-teletubbies.html'
+		},
+
+		{
+			title : 'Museum Angkut',
+			description : 'Museum Angkut merupakan tempat yang berisi aneka barang antik bersejarah. Museum pertama yang menggunakan konsep transportasi ini pertama kali di buka pada 9 Maret 2014. Memang terkesan masih baru, tetapi banyak pengunjung yang sangat antusias untuk melihat Museum Angkut di Kota Wisata Batu ini. Dengan desain ruangan yang klasik dan...',
+			image : 'assets/images/MuseumAngkut.jpg',
+			url : 'pages/museum-angkut.html'
+		},
+
+		{
+			title : 'Pantai Balekambang',
+			description : 'Pantai Balekambang terletak di Dusun Sumber Jambe, Desa Srigonco, Kecamatan Bantur, Malang. Dari pusat kota Malang, pantai ini dapat dicapai sejauh 60 kilometer ke arah selatan. Akses menuju pantai ini sudah cukup memadai. Jalannya telah diaspal mulus meski wisatawan harus tetap berhati-hati dengan beberapa tanjakan dan kelokan yang tajam. Sepanjang...',
+			image : 'assets/images/pantai-balekambang.png',
+			url : 'pages/pantai-balekambang.html'
+		},
+
+		{
+			title : 'Pantai Bowele',
+			description : 'Pantai Bowele sendiri sebenarnya merupakan singkatan dari deretan pantai yang ada di Tirtoyudo, yaitu Bolu-bolu, Wedi Awu dan Lenggoksono. Tiap destinasi tersebut menawarkan aktivitas berwisata yang berbeda.Lokasi Pantai Bowele dari Kota Malang berjarak sekitar 66 kilometer dari Balai Kota Malang atau jika ditempuh dengan kendaraan bisa menghabiskan waktu 135 menit. Pantai Bowele terbilang...',
+			image : 'assets/images/Pantai-Bowele.jpg',
+			url : 'pages/pantai-bowele.html'
+		},
+
+		{
+			title : 'Pemandian Cangar',
+			description : 'Di pemandian air panas cangar ini sudah disediakan kolam-kolam yang digunakan untuk berendam. Ada banyak jenis kolam. Ada kolam khusus wanita, kolam yang tertutup (privasi), kolam khusus berendam dan lainnya. Ada kolam yang didesain seperti tempat saunan di jepang. Jadi satu kamar mandi hanya digunakan untuk satu orang saja. Jadi anda...',
+			image : 'assets/images/cangar.jpg',
+			url : 'pages/pemandian-cangar.html'
+		},
+
+		{
+			title : 'Sumber Jenon',
+			description : 'Sumber Jenon terletak di kawasan desa Gunung Ronggo, kecamatan Tajinan, kabupaten Malang. Kebanyakan pengunjung datang dengan tujuan untuk berobat, mereka mempercayai bahwa air yang berada disana memiliki energy untuk menyembuhkan penyakit. Sebelum mengobati penyakitnya dengan mandi air Sumber Jenon Malang, terlebih dahulu air tersebut ditaburi...',
+			image : 'assets/images/sumberjenon.jpg',
+			url : 'pages/sumber-jenon.html'
+		},
+
+		{
+			title : 'Sumber Maron',
+			description : 'Sumber Maron - Kawasan wisata Sumber Maron ini menjadi kawasan wisata yang tersembunyi di Malang. Sumber Maron terletak di dusun Adiluwih - Desa Karangsuko, Kecamatan Pagelaran, Kabupaten Malang. Daya tarik dari tempat wisata ini adalah sumber mata airnya yang sangat jernih. Selain itujuga terdapat air terjun kecil yang menambah...',
+			image : 'assets/images/sumber-maron.jpg',
+			url : 'pages/sumber-maron.html'
+		},
+
+		{
+			title : 'Sumber Pitu',
+			description : 'Tempat ini berada di daerah Desa Duwetkrajan, Kecamatan Tumpang, Malang.Bukan itu saja, sebelum kamu sampapai lokasi air terjun cosumber pitu, kamu bisa lihat satu aliran dari air terjun lainnya yang letaknya berada di bagian bawah dan dinamai Cobal Tunggal.Uniknya dari...',
+			image : 'assets/images/sumber7.jpg',
+			url : 'pages/sumber-pitu.html'
+		},
+
+		{
+			title : 'Teluk Bidadari',
+			description : 'Teluk Bidadari merupakan sebuah genangan air laut berbentuk lingkaran dengan warna air biru kehijauan. Letak teluk ini berada satu area dengan Pantai Mbehi. Pantai itu sendiri...',
+			image : 'assets/images/teluk-bidadari.jpg',
+			url : 'pages/teluk-bidadari.html'
+		}
+		];
+
+		$.each(data.slice(start, finish), function (i, data) {
+			if(i%2 == 0) {
+				$("#list-article").append("<div class='row'><div class='column-12-sm'><div class='column-5-sm animation-right visible-hide'><img src='"+data.image+"' alt='HTML5' class='img-tourism'></div><div class='column-7-sm animation-right visible-hide'><h2 class='sub-title'>"+data.title+"</h2><p>"+data.description+"</p><button type='button' class='button button-prim' onclick=window.location.href='"+data.url+"'>Detail</button</div></div></div>");
+			} else {
+				$("#list-article").append("<div class='row'><div class='column-12-sm'><div class='column-7-sm animation-right visible-hide'><h2 class='sub-title'>"+data.title+"</h2><p>"+data.description+"</p><button type='button' class='button button-prim' onclick=window.location.href='"+data.url+"'>Detail</button></div><div class='column-5-sm animation-right visible-hide'><img src='"+data.image+"'  alt='HTML5' class='img-tourism'></div></div></div>");
+			}
+		});
+	}
+
+
 </script>
 </html>

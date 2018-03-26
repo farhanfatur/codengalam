@@ -37,6 +37,10 @@
 		height: 500px;
 	}
 
+	#list-article {
+		color : #37393d;
+	}
+
 	.link-news {
 		color : #51ADCF;
 		transition : 0.2s linear;
@@ -280,28 +284,28 @@
 	}
 
 	.section1-page-2 {
-		background-image: url('../images/kondang merak.jpg');
+		background-image: url('../images/kondang-merak.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
 	}
 
 	.section1-page-3 {
-		background-image: url('../images/kedung jembar.jpg');
+		background-image: url('../images/kedung-jembar.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
 	}
 
 	.section1-page-4 {
-		background-image: url('../images/budug asu.jpg');
+		background-image: url('../images/budug-asu.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
 	}
 
 	.section1-page-5 {
-		background-image: url('../images/cemoro lawang.jpg');
+		background-image: url('../images/cemoro-lawang.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
@@ -315,7 +319,7 @@
 	}
 
 	.section1-page-7 {
-		background-image: url('../images/teluk bidadari.jpg');
+		background-image: url('../images/teluk-bidadari.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
@@ -336,7 +340,7 @@
 	}
 
 	.section1-page-10 {
-		background-image: url('../images/goa pinus.jpg');
+		background-image: url('../images/goa-pinus.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
@@ -392,14 +396,14 @@
 	}
 
 	.section1-page-18 {
-		background-image: url('../images/coban glotak.jpg');
+		background-image: url('../images/coban-glotak.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
 	}
 
 	.section1-page-19 {
-		background-image: url('../images/pemandian kalireco.jpg');
+		background-image: url('../images/pemandian-kalireco.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
