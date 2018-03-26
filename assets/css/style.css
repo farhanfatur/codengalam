@@ -78,11 +78,38 @@
 		border-radius: 50%;
 	}
 
-	.img-galery, .img-caption-galery {
+	.img-galery {
 		width: 400px;
-		height: 250px;
+		height: 260px;
+	}
+
+	.img-caption-galery {
+		width: 400px;
+		height: 260px;
+		position : relative;
+		transition: 0.5s ease;
 	}
 	
+	.img-overlay {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 250px;
+	    display: none;
+	    color: #FFF;
+	}
+
+	.img-caption-galery:hover .img-overlay {
+		display: block;
+		background: rgba(0, 0, 0, .6);
+	}
+
+	.image-title {
+		font-size: 30px;
+		margin-left: 20px;
+	}
+
 	.img-galery:hover  {
 		box-shadow : ;
 	}
@@ -117,24 +144,40 @@
 	}
 
 	.picture-1 {
-		background-image: url('../images/Wisata-Malang.jpg');
+		background-image: url('../images/sumber-maron-b.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
 
 	.picture-2 {
-		background-image: url('../images/wrapper2.jpg');
+		background-image: url('../images/kedung-jembar-b.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
 
 	.picture-3 {
-		background-image: url('../images/pantai-3-warna-malang-by-rulayyy.jpg');
+		background-image: url('../images/budug-asu-b.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	.picture-4 {
-		background-image: url('../images/sub-list1.jpg');
+		background-image: url('../images/sumberjenon.jpg');
 	}
+
+	
+
+	.picture-5 {
+		background-image: url('../images/Coban_Rondo.jpg');
+		background-size: cover;
+	}
+	
+
+	.picture-6 {
+		background-image: url('../images/cangar.jpg');
+		background-size: cover;
+	}
+	
 
 	/* End of Image */
 	.img-slider-1 {
@@ -163,19 +206,33 @@
 
 	.box-img-1 {
 		opacity : 0.7;
-		background-image : url('../images/slider2.jpg');
+		background-image : url('../images/sumber-maron-t.jpg');
 		background-repeat: no-repeat;
 		transition : 0.2s linear;
 	}
 
 	.box-img-2 {
 		opacity : 0.7;
-		background-image : url('../images/gambar.png');
+		background-image : url('../images/sumberjenon-t.jpg');
 		background-repeat: no-repeat;
 		transition : 0.2s linear;
 	}
 
-	.box-img-2:hover, .box-img-1:hover {
+	.box-img-3 {
+		opacity : 0.7;
+		background-image : url('../images/budug-asu-t.jpg');
+		background-repeat: no-repeat;
+		transition : 0.2s linear;
+	}
+
+	.box-img-4 {
+		opacity : 0.7;
+		background-image : url('../images/pemandian-kalireco-t.jpg');
+		background-repeat: no-repeat;
+		transition : 0.2s linear;
+	}
+
+	.box-img-2:hover, .box-img-1:hover , .box-img-3:hover , .box-img-4:hover {
 		background-color : rgba(0, 0, 0, 0.5);
 		opacity: 1.0;
 	}
@@ -253,28 +310,28 @@
 	}
 
 	.section1-page-2 {
-		background-image: url('../images/kondang merak.jpg');
+		background-image: url('../images/kondang-merak.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
 	}
 
 	.section1-page-3 {
-		background-image: url('../images/kedung jembar.jpg');
+		background-image: url('../images/kedung-jembar.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
 	}
 
 	.section1-page-4 {
-		background-image: url('../images/budug asu.jpg');
+		background-image: url('../images/budug-asu.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
 	}
 
 	.section1-page-5 {
-		background-image: url('../images/cemoro lawang.jpg');
+		background-image: url('../images/cemoro-lawang.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
@@ -288,7 +345,7 @@
 	}
 
 	.section1-page-7 {
-		background-image: url('../images/teluk bidadari.jpg');
+		background-image: url('../images/teluk-bidadari.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
@@ -309,7 +366,7 @@
 	}
 
 	.section1-page-10 {
-		background-image: url('../images/goa pinus.jpg');
+		background-image: url('../images/goa-pinus.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
@@ -351,7 +408,7 @@
 	}
 
 	.section1-page-16 {
-		background-image: url('../images/garden flower.jpg');
+		background-image: url('../images/garden-flower.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
@@ -365,14 +422,14 @@
 	}
 
 	.section1-page-18 {
-		background-image: url('../images/coban glotak.jpg');
+		background-image: url('../images/coban-glotak.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
 	}
 
 	.section1-page-19 {
-		background-image: url('../images/pemandian kalireco.jpg');
+		background-image: url('../images/pemandian-kalireco.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 250px;
@@ -428,7 +485,7 @@
 	}
 
 	.section1-galery {
-		padding: 150px;
+		padding: 250px;
 		background-attachment: fixed;
 		background-image: url('../images/pantai-3-warna-malang-by-rulayyy.jpg');
 		background-repeat: no-repeat;
