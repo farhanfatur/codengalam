@@ -83,11 +83,13 @@
 			<div class="row">
 				<div class="column-12-sm">
 					<div class="column-12-sm">
-						<div id="map"></div>
+						<h1 class="title-black">Lokasi</h1>
+						<div ><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.158859802581!2d112.6286126142431!3d-7.982524594250946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd628181bac60c7%3A0xe71f0ef69b3810b4!2sAlun+Alun+Merdeka+Malang!5e0!3m2!1sid!2sid!4v1521945021921" width="1250" height="500" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="clear"></div>
 		<div class="row">
 				<div class="column-12-sm">
 					<div class="row">
@@ -173,16 +175,17 @@
 			</div>
 		</div>
 	</div>
+
 </body>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMraBes4an_Ih5G4W0NNO0CgW5lFnW6f0&callback=myMap"></script>
 <script type="text/javascript" src="../assets/js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.bxslider.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.elevatezoom.js"></script>
 <script type="text/javascript">
+	//(-7.982116, 112.630908)
 	function myMap() {
 		var mapOptions = {
-		    center: new google.maps.LatLng(51.5, -0.12),
-		    zoom: 10,
+		    center: new google.maps.LatLng(-7.982484, 112.630799),
+		    zoom: 100,
 		    mapTypeId: google.maps.MapTypeId.HYBRID
 		}
 		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
