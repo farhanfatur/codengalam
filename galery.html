@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="icon" href="assets/images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="assets/css/jquery.bxslider.css">
+<style type="text/css">
+</style>
+	<title>Galery - Malang Mbois</title>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="row">
+				<div class="column-12-sm">
+					<div class="position-left">
+						<img src="assets/images/logo2.png">
+					</div>
+					<div class="position-right">
+						<ul class="list">
+							<li><a href="index.html">Beranda</a></li>
+							<li class="active"><a href="galery.html">Galeri</a></li>
+							<li><a href="tourism.html">Objek Wisata</a></li>
+							<li><a href="profile.html">Profil</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section1-galery">
+			
+		</div>
+		<div class="section2-galery">
+		<div class="row">
+			<div class="column-12-sm">	
+				<div class="column-8-sm">
+					<h1 class="title-black">Kumpulan foto tempat wisata</h1>
+					<div class="underline"></div>
+				</div>
+			</div>
+		</div>
+			<div class="row">
+				<div class="column-12-sm" id="tampilData">
+				</div>
+			</div>
+			<div class="row">
+				<div class="column-12-sm">
+					<div class="column-12-sm">
+						<div class="txt-center">
+							<button class="button button-prim" onclick="prev()">Prev</button>
+							<button class="button button-prim" onclick="next()">Next</button>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<div class="section5-index">
+			<div class="row">
+				<div class="column-12-sm">
+					<div class="column-4-sm">
+						<h2 class="sub-title">About</h2>
+						<div class="underline"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div class="column-4-sm">
+						<h2 class="sub-title">Link</h2>
+						<div class="underline"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div class="column-4-sm">
+						<h2 class="sub-title">Contact</h2>
+						<div class="underline"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="preloader">
+			<div class="loading">
+				<img src="assets/images/preloader-page.gif">
+			</div>
+		</div>
+		<input type="hidden" id="start" />
+		<input type="hidden" id="finish" />
+	</div>
+</body>
+<script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.bxslider.js"></script>
+<script type="text/javascript">
+	$(document).ready(function (){
+		  $(window).scroll(function(){
+		  	var scroll = $(window).scrollTop();
+			  if (scroll > 150) {
+			    $(".header").css("background" , "#025277")  ;	
+			  }
+			  else{
+			  	$(".header").css("background" , "rgba(4, 102, 147, 0.3)")
+			  				.css("box-shadow","0 2px 4px 1px rgba(0, 0, 0, 0.15)")
+			  				.css("transition", "0.2s linear")
+			  				.css("max-width", "96.5%;");
+			  }
+		  });
+
+		  loadMore(0, 9);
+
+		$(".slider1").bxSlider({
+			mode : 'fade',
+			auto: true,
+			stopAutoOnClick: true,
+			pager : true,
+			responsive : true
+		});
+
+		$(".slider2").bxSlider({
+			auto: false,
+			stopAutoOnClick: true,
+			pager: true,
+			responsive : true,
+			caption : true,
+			slideWidth : 700
+		});
+
+		$(".slider3").bxSlider({
+			auto: false,
+			stopAutoOnClick: true,
+			pager: true,
+			responsive : true,
+			captions : true
+		});
+
+		$(".preloader").fadeOut();
+
+		
+
+		
+
+		
+
+		// $(".img-caption-galery").mouseenter(function () {
+
+		// 	// $(".img-overlay").slideDown();
+		// }).mouseleave(function () {
+		// 	// $(".img-overlay").slideUp();
+		// });
+	});
+		function loadMore(start, finish) {
+			$("#tampilData").html("");
+			var data = [
+				{
+					title:'Sumber Maron', 
+					image: 'assets/images/galery/sumber-maron.jpg',
+					description: 'deskripsi singkat' ,
+					url:'pages/sumber-maron.html'
+				},
+
+				{
+					title:'Sumber Jenon',
+					image: 'assets/images/galery/sumber-jenon.png',
+					description: 'deskripsi singkat' ,
+					url:'/'
+				},
+
+				{
+					title:'Gunung Bromo',
+					image: 'assets/images/galery/bromo.png',
+					description: 'deskripsi singkat' ,
+					url:'/'
+				},
+
+				{
+					title:'Budug Asu', 
+					image: 'assets/images/galery/budug-asu.jpg',
+					description: 'deskripsi singkat'
+					,url:'/'
+				},
+
+				{
+					title:'Coban Rondo', 
+					image: 'assets/images/galery/coban-rondo.png',
+					description: 'deskripsi singkat' 
+					,url:'/'
+				},
+
+				{
+					title:'Kedung Jembar', 
+					image: 'assets/images/galery/kedung-jembar.png',
+					description: 'deskripsi singkat' ,
+					url:'/'
+				},
+
+				{
+					title:'Kali Reco', 
+					image: 'assets/images/galery/kalireco.png',
+					description: 'deskripsi singkat' ,
+					url:'/'
+				},
+
+				{
+					title:'Kondang Merak', 
+					image: 'assets/images/galery/kondang-merak.png',
+					description: 'deskripsi singkat' ,
+					url:'/'
+				},
+
+				{
+					title:'Sumber Maron', 
+					image: 'assets/images/galery/sumber-maron.jpg',
+					description: 'deskripsi singkat' ,
+					url:'/'
+				},
+				{
+					title:'Teluk Bidadari', 
+					image: 'assets/images/galery/teluk-bidadari.jpg',description: 'deskripsi singkat' ,
+					url:'/'
+				},
+
+				{
+					title:'Cangar', 
+					image: 'assets/images/galery/cangar.jpg',
+					description: 'deskripsi singkat' ,
+					url:'/'
+				},
+
+				{
+					title:'Budug Asu', 
+					image: 'assets/images/galery/budug-asu.jpg',
+					description: 'deskripsi singkat' ,
+					url:'/'
+				},
+
+				{
+					title:'Kali Reco', 
+					image: 'assets/images/galery/kalireco.png',
+					description: 'deskripsi singkat' ,
+					url:'/'
+				},
+
+				{
+					title:'Pantai Bowele',
+					image: 'assets/images/galery/Pantai-Bowele.jpg',
+					description: 'deskripsi singkat' ,
+					url:'/'
+				},
+
+				{
+					title:'Alun Alun', 
+					image: 'assets/images/galery/alun-alun.png',
+					description: 'deskripsi singkat' ,
+					url:'/'
+				},
+
+				{
+					title:'Coban Glotak', 
+					image: 'assets/images/galery/coban-glotak.jpg',
+					description: 'deskripsi singkat' ,
+					url:'/'
+				}
+			];
+
+			$.each(data.slice(start,finish), function (i, data) {
+				$("#tampilData").append("<div class='column-4-sm'><div class='img-caption-galery'><img src='"+data.image+"' class='img-galery'><div class='img-overlay'><p class='image-title'>"+data.title+"</p><a href="+data.url+">Lihat Selengkapnya</a></div></div></div>");
+			});
+
+			$("#start").val(start);
+			$("#finish").val(finish);
+		}
+		
+		function next() {
+			var start = $("#start").val();
+			var finish = $("#finish").val();
+			if(start == 0 ) {
+				start = 10;
+				finish = 19;
+				$("#start").val(start);
+				$("#finish").val(finish);
+				loadMore(start, finish);			
+			}
+		}
+
+		function prev() {
+			var start = $("#start").val();
+			var finish = $("#finish").val();
+
+			if(start > 0 ) {
+				start = 0;
+				finish = 9;
+				$("#start").val(start);
+				$("#finish").val(finish);
+				loadMore(start, finish);			
+			}
+		}
+</script>
+</html>

@@ -1,0 +1,920 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Libre+Baskerville|Nanum+Gothic');
+
+	.slider {
+		margin : 0 auto;
+		width: 100%;
+		height: 300px;
+	}
+
+	.header{
+		width: 100%;
+		overflow: hidden;
+		top: 0;
+		height: 86px;
+		background-color: rgba(4, 102, 147, 0.3);
+	    z-index:  10000;
+	    position: fixed;
+	    padding-top: 16px;
+	    padding-bottom : 16px;
+	    padding-left: 24px;
+	    padding-right: 24px;
+	    display:  flex;
+	}
+
+	.footer {
+		padding: 12px;
+		color : white;
+		background-color: #0b2247;
+	}
+
+	.section1 {
+		position: relative;
+	}
+
+	#map {
+
+		width: 1250px;
+		height: 500px;
+	}
+
+	.link-news {
+		color : #51ADCF;
+		transition : 0.2s linear;
+	}
+
+	.link-news:hover {
+		color : #3e8fad;
+	}
+
+	.article-profile {
+		text-indent: 1cm;
+	}
+
+	.preloader {
+		position: fixed;
+		top : 0;
+		left : 0;
+		width : 100%;
+		height : 100%;
+		background-color : #fff;
+		z-index : 100000;
+	}
+
+	.preloader .loading {
+		position: absolute;
+		top : 50%;
+		left : 50%;
+		transform : translate(-50%, -50%);
+	}
+
+	.font-size-5 {
+		font-size: 16px;
+	}
+
+	/* Image */
+	.img-circle-sm {
+		width: 160px;
+		height: 140px;
+		border-radius: 50%;
+	}
+
+	.img-galery {
+		width: 400px;
+		height: 260px;
+	}
+
+	.img-caption-galery {
+		width: 400px;
+		height: 260px;
+		position : relative;
+		transition: 0.5s ease;
+	}
+	
+	.img-overlay {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 250px;
+	    display: none;
+	    color: #FFF;
+	}
+
+	.img-caption-galery:hover .img-overlay {
+		display: block;
+		background: rgba(0, 0, 0, .6);
+	}
+
+	.image-title {
+		font-size: 30px;
+		margin-left: 20px;
+	}
+
+	.img-galery:hover  {
+		box-shadow : ;
+	}
+
+	.img-page {
+		width: 1250px;
+	}
+
+	.img-sm {
+		width : 170px;
+		height : 120px;
+	}
+
+	.img-tourism {
+		width: 500px;
+		height: 250px;
+	}
+
+	.img-overlay {
+		width: 400px;
+	    height: 257.3px;
+	    background-color: #ffb00f;
+	    z-index: 1;
+	    opacity: 0.5;
+	    position: absolute;
+	    top: 0;
+	    display:none;
+	}
+
+	div.footer-overlay {
+		margin-bottom : 0;
+	}
+
+	.picture-1 {
+		background-image: url('../images/sumber-maron-b.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.picture-2 {
+		background-image: url('../images/kedung-jembar-b.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.picture-3 {
+		background-image: url('../images/budug-asu-b.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.picture-4 {
+		background-image: url('../images/sumberjenon.jpg');
+	}
+
+	
+
+	.picture-5 {
+		background-image: url('../images/Coban_Rondo.jpg');
+		background-size: cover;
+	}
+	
+
+	.picture-6 {
+		background-image: url('../images/cangar.jpg');
+		background-size: cover;
+	}
+	
+
+	/* End of Image */
+	.img-slider-1 {
+		
+		padding: 320px;
+	}
+
+	.img-slider-2 {
+		
+		padding: 250px;
+	}
+
+	.clear {
+		clear: both;
+	}
+
+	.box-md {
+		margin : 0;
+		padding: 120px;
+	}
+
+	.box-sm {
+		background : green;
+		height : 200px;
+	}
+
+
+	.box-img-1 {
+		opacity : 0.7;
+		background-image : url('../images/sumber-maron-t.jpg');
+		background-repeat: no-repeat;
+		transition : 0.2s linear;
+	}
+
+	.box-img-2 {
+		opacity : 0.7;
+		background-image : url('../images/sumberjenon-t.jpg');
+		background-repeat: no-repeat;
+		transition : 0.2s linear;
+	}
+
+	.box-img-3 {
+		opacity : 0.7;
+		background-image : url('../images/budug-asu-t.jpg');
+		background-repeat: no-repeat;
+		transition : 0.2s linear;
+	}
+
+	.box-img-4 {
+		opacity : 0.7;
+		background-image : url('../images/pemandian-kalireco-t.jpg');
+		background-repeat: no-repeat;
+		transition : 0.2s linear;
+	}
+
+	.box-img-2:hover, .box-img-1:hover , .box-img-3:hover , .box-img-4:hover {
+		background-color : rgba(0, 0, 0, 0.5);
+		opacity: 1.0;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	.active {
+		border-bottom : 2px solid white;
+	}
+
+	a {
+		text-decoration: none;
+		color: white;
+	}
+
+	div.no-space {
+		margin-left : 0;
+		margin-right : 0;
+		margin-bottom: 0;
+		margin-top : 0;
+	}
+
+	li {
+		float: left;
+		padding: 8px;
+		transition: 0.2s ease;
+		border-bottom: 0px solid white;
+	}
+
+	li:hover {
+		border-bottom: 2px solid white;
+	}
+
+	.superbig-title {
+		color : #e0e0e0;
+		font-size: 64px;
+	}
+
+	.big-title {
+		color : #393a3a;
+		font-size: 52px; 
+	}
+
+	.title {
+		color : white;
+		font-size: 46px;
+	}
+
+	.title-black {
+		color : black;
+		font-size: 46px;
+	}
+
+	.sub-title {
+		color : ;
+		font-size: 36px;
+	}
+
+	.sub-sub-title {
+		width: 50%;
+	}
+
+	.underline {
+		width: 140px;
+		border : 2px solid #51ADCF;
+	}
+
+	.section1-page-1 {
+		background-image: url('../images/alunalun.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-2 {
+		background-image: url('../images/kondang-merak.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-3 {
+		background-image: url('../images/kedung-jembar.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-4 {
+		background-image: url('../images/budug-asu.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-5 {
+		background-image: url('../images/cemoro-lawang.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-6 {
+		background-image: url('../images/bromo.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-7 {
+		background-image: url('../images/teluk-bidadari.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-8 {
+		background-image: url('../images/MuseumAngkut.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-9 {
+		background-image: url('../images/sumberjenon.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-10 {
+		background-image: url('../images/goa-pinus.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-11 {
+		background-image: url('../images/sumber-maron.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-12 {
+		background-image: url('../images/pantai-balekambang.png');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-13 {
+		background-image: url('../images/Lembah-Teletubbies.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-14 {
+		background-image: url('../images/Pantai-Bowele.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-15 {
+		background-image: url('../images/Coban_Rondo.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-16 {
+		background-image: url('../images/garden-flower.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-17 {
+		background-image: url('../images/sumber7.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-18 {
+		background-image: url('../images/coban-glotak.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-19 {
+		background-image: url('../images/pemandian-kalireco.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-page-20 {
+		background-image: url('../images/cangar.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 250px;
+	}
+
+	.section1-profile {
+		background-image: url('../images/profile-image.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		padding: 200px;
+	}
+
+	.section1-index {
+		background-color : rgba(0, 0, 0, 0.5);
+		color : white;
+	}
+
+	.section2-index {
+		padding: 15px;
+		margin-top : 0;
+		background-color: #f4fcff;
+		color : #161616;
+	}
+
+	.section2-page {
+		color : #202020; 
+		font-size: 20px;
+	}
+
+	.section3-index {
+		background-image: url('../images/paralayang.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		color : #fff;
+	}
+
+	.section4-index {
+		margin-top : 0;
+		padding: 25px;
+	}
+
+	.section5-index {
+		color : #bfbfbf;
+		background-color: #0b2247;
+	}
+
+	.section1-galery {
+		padding: 250px;
+		background-attachment: fixed;
+		background-image: url('../images/pantai-3-warna-malang-by-rulayyy.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		/*background-position: 12px 12px;*/
+	}
+
+	.section1-tourism {
+		padding: 232px;
+		background-attachment: fixed;
+		background-image: url('../images/air-terjun-coban-rondo-2.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		/*background-position: 300px 0px;*/
+	}
+
+	.section2-tourism {
+		padding-top : 20px;
+		padding-bottom : 20px;
+	}
+
+	.section2-galery {
+		background-color: #fcfeff;
+		padding-bottom : 40px;
+	}
+	html,
+	body {
+		padding: 0;
+		margin : 0;
+		height : 100%;
+		width : 100%;
+		font-size: 100%;
+		font-family: 'Lato', sans-serif;
+	}
+
+	/* Positioning */
+	.position-left {
+		float: left;
+	}
+
+	.position-right {
+		float: right;
+	}
+
+	.position-absolute-page {
+		position: absolute;
+		top : 0;
+		padding : 300px 530px;
+	}
+
+	.txt-left {
+		text-align: left;
+	}
+
+	.txt-right {
+		text-align: right;
+	}
+
+	.txt-center {
+		text-align: center;
+		margin-left : auto;
+		margin-right: auto;
+	}
+
+	.txt-justify {
+		text-align: justify;
+	}
+
+	/* End of Positioning */
+	/* Grid System */
+	.container {
+		width : 100%;
+	}
+
+	.row {
+		width : 100%;
+		position: relative;
+	}
+
+	.row [class^="column-"], [class*=" column-"] {
+		float: left;
+		margin: 0.5rem 2%;
+  		min-height: 0.125rem;
+	}
+
+	/* Grid System without space */
+	.row-fluid [class^="columns-"], [class*=" columns-"] {
+		float: left;
+		margin: 0%;
+  		min-height: 0.125rem;
+	}
+
+	.row::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.hidden-sm {
+	  display: none;
+	}
+
+	.columns-1,
+	.columns-2,
+	.columns-3,
+	.columns-4,
+	.columns-5,
+	.columns-6,
+	.columns-7,
+	.columns-8,
+	.columns-9,
+	.columns-10,
+	.columns-11,
+	.columns-12, {
+		width: 96%;
+	}
+
+	.columns-1-sm {
+  		width: 4.33%;
+	}
+
+	.columns-2-sm {
+	  width: 12.66%;
+	}
+
+	.columns-3-sm {
+	  width: 21%;
+	}
+
+	.columns-4-sm {
+	  width: 29.33%;
+	}
+
+	.columns-5-sm {
+	  width: 37.66%;
+	}
+
+	.columns-6-sm {
+	  width: 46%;
+	}
+
+	.columns-7-sm {
+	  width: 54.33%;
+	}
+
+	.columns-8-sm {
+	  width: 62.66%;
+	}
+
+	.columns-9-sm {
+	  width: 71%;
+	}
+
+	.columns-10-sm {
+	  width: 79.33%;
+	}
+
+	.columns-11-sm {
+	  width: 87.66%;
+	}
+
+	.columns-12-sm {
+	  width: 96%;
+	}
+
+	.columns-padding {
+		padding-top : 150px;
+	}
+
+	/* End of Grid System without space */
+	.row::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.column-1,
+	.column-2,
+	.column-3,
+	.column-4,
+	.column-5,
+	.column-6,
+	.column-7,
+	.column-8,
+	.column-9,
+	.column-10,
+	.column-11,
+	.column-12, {
+		width: 96%;
+	}
+
+	.column-1-sm {
+  		width: 4.33%;
+	}
+
+	.column-2-sm {
+	  width: 12.66%;
+	}
+
+	.column-3-sm {
+	  width: 21%;
+	}
+
+	.column-4-sm {
+	  width: 29.33%;
+	}
+
+	.column-5-sm {
+	  width: 37.66%;
+	}
+
+	.column-6-sm {
+	  width: 46%;
+	}
+
+	.column-7-sm {
+	  width: 54.33%;
+	}
+
+	.column-8-sm {
+	  width: 62.66%;
+	}
+
+	.column-9-sm {
+	  width: 71%;
+	}
+
+	.column-10-sm {
+	  width: 79.33%;
+	}
+
+	.column-11-sm {
+	  width: 87.66%;
+	}
+
+	.column-12-sm {
+	  width: 94%;
+	}
+
+	/*End of Grid System*/
+	
+	/* Button */
+	.button {
+		padding : 10px;
+		color : white;
+		font-size : 14px;
+		border : 0;
+		cursor: pointer;
+		padding: 10px 20px;
+		border-radius: 5px;
+	}
+	.button-big {
+		font-size : 18px;
+		padding: 15px 30px;
+	}
+	.button-prim {
+		background-color: #3665af;
+		transition : 0.2s linear;
+	}
+	.button-prim:hover {
+		background-color: #3f70bf;
+	}
+	/* End of Button */
+
+	#gallery_01 img{border:2px solid white;}
+ 
+ 	.active img{border:2px solid #333 !important;}
+
+	@media only screen and (max-width: 33.75em) {  /* 540px */
+		.container {
+		    width: 80%;
+		}
+	}
+
+	@media only screen and (max-width: 45em) {  /* 720px */
+	  .column-1-sm {
+	    width: 4.33%;
+	  }
+
+	  .column-2-sm {
+	    width: 12.66%;
+	  }
+
+	  .column-3-sm {
+	    width: 21%;
+	  }
+
+	  .column-4-sm {
+	    width: 29.33%;
+	  }
+
+	  .column-5-sm {
+	    width: 37.66%;
+	  }
+
+	  .column-6-sm {
+	    width: 46%;
+	  }
+
+	  .column-7-sm {
+	    width: 54.33%;
+	  }
+
+	  .column-8-sm {
+	    width: 62.66%;
+	  }
+
+	  .column-9-sm {
+	    width: 71%;
+	  }
+
+	  .column-10-sm {
+	    width: 79.33%;
+	  }
+
+	  .column-11-sm {
+	    width: 87.66%;
+	  }
+
+	  .column-12-sm {
+	    width: 96%;
+	  }
+
+	  .hidden-sm {
+	    display: block;
+	  }
+	}
+
+	@media only screen and (max-width: 60em) { /* 960px */
+	  .container {
+	    width: 75%;
+	    max-width: 60rem;
+	  }
+
+	  .section3 {
+	  	background : none;
+	  }
+
+	  .text-hide {
+	  	display: none;
+	  }
+	}
+
+	.visible-hide {
+		visibility: hidden;
+	}
+
+	.slideRight {
+	    visibility: visible;
+	    animation-name: slideRight;
+	    -webkit-animation-name: slideRight;
+	    animation-duration: 1.5s;
+	    -webkit-animation-duration: 1.5s;
+	    /*animation-timing-function: ease-in-out;*/
+	    /*-webkit-animation-timing-function: ease-in-out;*/
+	}
+
+	@keyframes slideRight {
+	    0% {
+	        transform: translateX(-150%);
+	        transition:  opacity ;
+	    }
+	    100% {
+	        transform: translateX(0%);
+	        transition : opacity(1.0);
+	    }
+	}
+
+	@-webkit-keyframes slideRight {
+	    0% {
+	        -webkit-transform: translateX(-150%);
+	    }
+	    100% {
+	        -webkit-transform: translateX(0%);
+	    }
+	}
+
+	.slideLeft {
+	    visibility: visible;
+	    animation-name: slideLeft;
+	    -webkit-animation-name: slideLeft;
+	    animation-duration: 1.5s;
+	    -webkit-animation-duration: 1.5s;
+	    /*animation-timing-function: ease-in-out;*/
+	    /*-webkit-animation-timing-function: ease-in-out;*/
+	}
+
+	@keyframes slideLeft {
+	    0% {
+	        transform: translateX(150%);
+	    }
+	    100% {
+	        transform: translateX(0%);
+	    }
+	}
+
+	@-webkit-keyframes slideLeft {
+	    0% {
+	        -webkit-transform: translateX(150%);
+	    }
+	    100% {
+	        -webkit-transform: translateX(0%);
+	    }
+	}
+
+	.slideTop {
+	    visibility: visible;
+	    animation-name: slideTop;
+	    -webkit-animation-name: slideTop;
+	    animation-duration: 1.5s;
+	    -webkit-animation-duration: 1.5s;
+	    /*animation-timing-function: ease-in-out;*/
+	    /*-webkit-animation-timing-function: ease-in-out;*/
+	}
+
+	@keyframes slideTop {
+	    0% {
+	        transform: translateY(150%);
+	    }
+	    100% {
+	        transform: translateY(0%);
+	    }
+	}
+
+	@-webkit-keyframes slideTop {
+	    0% {
+	        -webkit-transform: translateY(150%);
+	    }
+	    100% {
+	        -webkit-transform: translateY(0%);
+	    }
+	}
