@@ -134,7 +134,7 @@
 		},
 
 		{
-			title : 'Batu Flowe Garden',
+			title : 'Batu Flower Garden',
 			description : 'Batu Flower Garden terletak di bibir Bukit Bulu di area Coban Rais, tepatnya di atas bukit Coban Rais. Ya sesuai namanya, spot keren ini merupakan kebun bunga. Keunikannya adalah Lokasi Batu flower Garden ini berada di bibir bukit. Aneka tanaman bunga ditanam dan bisa menjadi spot selfie keren terutama bagi cewek cewek yang suka bunga...',
 			image : 'assets/images/garden-flower.jpg',
 			url : 'pages/batu-flower-garden.html'
@@ -259,6 +259,17 @@
 			url : 'pages/teluk-bidadari.html'
 		}
 		];
+
+		var batas = 5;
+		var awal;
+
+		for(awal = 1; awal <= data.length;awal++) {
+			console.log("data => ", awal);
+			var jumlah =  data.length/5;
+
+			console.log("Jumlah => ", jumlah);
+		}
+
 
 		$.each(data.slice(start, finish), function (i, data) {
 			if(i%2 == 0) {

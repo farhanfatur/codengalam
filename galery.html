@@ -267,7 +267,7 @@
 			];
 
 			$.each(data.slice(start,finish), function (i, data) {
-				$("#tampilData").append("<div class='column-4-sm'><div class='img-caption-galery'><img src='"+data.image+"' class='img-galery'><div class='img-overlay'><p class='image-title'>"+data.title+"</p><a href="+data.url+">Lihat Selengkapnya</a></div></div></div>");
+				$("#tampilData").append("<div class='column-4-sm'><div class='img-caption-galery'><img src='"+data.image+"' class='img-galery'><div class='img-overlay'><p class='image-title'>"+data.title+"</p><a href="+data.url+" class='link-galery-overlay'>Lihat Selengkapnya</a></div></div></div>");
 			});
 
 			$("#start").val(start);
@@ -277,6 +277,9 @@
 		function next() {
 			var start = $("#start").val();
 			var finish = $("#finish").val();
+
+			
+
 			if(start == 0 ) {
 				start = 10;
 				finish = 19;
