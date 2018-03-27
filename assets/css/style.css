@@ -49,6 +49,11 @@
 	.link-galery-overlay {
 		margin-left : 20px;
 	}
+	
+	.link-galery-overlay:hover {
+		border-bottom : 1px solid white;
+		margin-left : 20px;
+	}
 
 	.link-news:hover {
 		color : #3e8fad;
@@ -121,6 +126,7 @@
 	    height: 250px;
 	    display: none;
 	    color: #FFF;
+	    transition: 0.2s linear;
 	}
 
 	.image-title {
@@ -158,7 +164,7 @@
 
 	.img-tourism {
 		width: 500px;
-		height: 250px;
+		height: 100%;
 	}
 
 	.img-overlay {
@@ -892,20 +898,22 @@
 	@keyframes slideRight {
 	    0% {
 	        transform: translateX(-150%);
-	        transition:  opacity ;
+	        opacity: 0;
 	    }
 	    100% {
 	        transform: translateX(0%);
-	        transition : opacity(1.0);
+	        opacity: 1;
 	    }
 	}
 
 	@-webkit-keyframes slideRight {
 	    0% {
 	        -webkit-transform: translateX(-150%);
+	        opacity: 0;
 	    }
 	    100% {
 	        -webkit-transform: translateX(0%);
+	        opacity: 1;
 	    }
 	}
 
@@ -922,18 +930,22 @@
 	@keyframes slideLeft {
 	    0% {
 	        transform: translateX(150%);
+	        opacity: 0;
 	    }
 	    100% {
 	        transform: translateX(0%);
+	        opacity: 1;
 	    }
 	}
 
 	@-webkit-keyframes slideLeft {
 	    0% {
 	        -webkit-transform: translateX(150%);
+	        opacity: 0;
 	    }
 	    100% {
 	        -webkit-transform: translateX(0%);
+	        opacity: 1;
 	    }
 	}
 

@@ -204,108 +204,89 @@
 					title:'Sumber Jenon',
 					image: 'assets/images/galery/sumber-jenon.png',
 					description: 'deskripsi singkat' ,
-					url:'/'
+					url:'pages/sumber-jenon.html'
 				},
 
 				{
 					title:'Gunung Bromo',
 					image: 'assets/images/galery/bromo.png',
 					description: 'deskripsi singkat' ,
-					url:'/'
+					url:'pages/gunung-bromo.html'
 				},
 
 				{
 					title:'Budug Asu', 
 					image: 'assets/images/galery/budug-asu.jpg',
 					description: 'deskripsi singkat'
-					,url:'/'
+					,url:'pages/budug-asu.html'
 				},
 
 				{
 					title:'Coban Rondo', 
 					image: 'assets/images/galery/coban-rondo.png',
 					description: 'deskripsi singkat' 
-					,url:'/'
+					,url:'pages/coban-rondo.html'
 				},
 
 				{
 					title:'Kedung Jembar', 
 					image: 'assets/images/galery/kedung-jembar.png',
 					description: 'deskripsi singkat' ,
-					url:'/'
+					url:'pages/kedung-jembar.html'
 				},
 
-				{
-					title:'Kali Reco', 
-					image: 'assets/images/galery/kalireco.png',
-					description: 'deskripsi singkat' ,
-					url:'/'
-				},
 
 				{
 					title:'Kondang Merak', 
 					image: 'assets/images/galery/kondang-merak.png',
 					description: 'deskripsi singkat' ,
-					url:'/'
+					url:'pages/kondang-merak.html'
 				},
 
 				{
 					title:'Sumber Maron', 
 					image: 'assets/images/galery/sumber-maron.jpg',
 					description: 'deskripsi singkat' ,
-					url:'/'
+					url:'pages/sumber-maron.html'
 				},
 				{
 					title:'Teluk Bidadari', 
 					image: 'assets/images/galery/teluk-bidadari.jpg',description: 'deskripsi singkat' ,
-					url:'/'
-				},
-
-				{
-					title:'Cangar', 
-					image: 'assets/images/galery/cangar.jpg',
-					description: 'deskripsi singkat' ,
-					url:'/'
+					url:'pages/teluk-bidadari.html'
 				},
 
 				{
 					title:'Budug Asu', 
 					image: 'assets/images/galery/budug-asu.jpg',
 					description: 'deskripsi singkat' ,
-					url:'/'
+					url:'budug-asu.html'
 				},
 
-				{
-					title:'Kali Reco', 
-					image: 'assets/images/galery/kalireco.png',
-					description: 'deskripsi singkat' ,
-					url:'/'
-				},
 
 				{
 					title:'Pantai Bowele',
 					image: 'assets/images/galery/Pantai-Bowele.jpg',
 					description: 'deskripsi singkat' ,
-					url:'/'
+					url:'pages/pantai-bowele.html'
 				},
 
 				{
 					title:'Alun Alun', 
 					image: 'assets/images/galery/alun-alun.png',
 					description: 'deskripsi singkat' ,
-					url:'/'
+					url:'pages/alun-alun.html'
 				},
 
 				{
 					title:'Coban Glotak', 
 					image: 'assets/images/galery/coban-glotak.jpg',
 					description: 'deskripsi singkat' ,
-					url:'/'
+					url:'pages/coban-glotak.html'
 				}
 			];
 
 			$.each(data.slice(start,finish), function (i, data) {
-				$("#tampilData").append("<div class='column-4-sm'><div class='img-caption-galery'><img src='"+data.image+"' class='img-galery'><div class='img-overlay'><p class='image-title'>"+data.title+"</p><a href="+data.url+" class='link-galery-overlay'>Lihat Selengkapnya</a></div></div></div>");
+				$("#tampilData").append("<div class='column-4-sm'><div class='img-caption-galery'><img src='"+data.image+"' class='img-galery'><div class='img-overlay'><p class='image-title'>"+data.title+"</p><a href="+data.url+" class='link-galery-overlay'>Lihat Selengkapnya &raquo;</a></div></div></div>");
 			});
 
 			$("#start").val(start);
