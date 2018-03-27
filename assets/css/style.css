@@ -37,6 +37,10 @@
 		height: 500px;
 	}
 
+	#list-article {
+		color : #37393d;
+	}
+
 	.link-news {
 		color : #51ADCF;
 		transition : 0.2s linear;
@@ -69,6 +73,10 @@
 
 	.font-size-5 {
 		font-size: 16px;
+	}
+
+	.no-float {
+		float: none;
 	}
 
 	/* Image */
@@ -106,6 +114,11 @@
 	    color: #FFF;
 	}
 
+	.image-title {
+		margin-top : 100px;
+		margin-left : 100px;
+	}
+
 	.img-caption-galery:hover .img-overlay {
 		display: block;
 		background: rgba(0, 0, 0, .6);
@@ -122,6 +135,11 @@
 
 	.img-page {
 		width: 1250px;
+	}
+
+	.img-profile {
+		width: 180px;
+		height: 250px;
 	}
 
 	.img-sm {
@@ -248,7 +266,7 @@
 		list-style: none;
 	}
 
-	.active {
+	.active  {
 		border-bottom : 2px solid white;
 	}
 
@@ -256,6 +274,7 @@
 		text-decoration: none;
 		color: white;
 	}
+
 
 	div.no-space {
 		margin-left : 0;
@@ -266,13 +285,20 @@
 
 	li {
 		float: left;
+		list-style: none;
 		padding: 8px;
 		transition: 0.2s ease;
 		border-bottom: 0px solid white;
 	}
 
-	li:hover {
-		border-bottom: 2px solid white;
+	li:not(.active) a {
+		color : #c1c1c1;
+	}
+
+
+	li:hover:not(.active) {
+		color : white;
+		border-bottom: 2px solid #c1c1c1;
 	}
 
 	.superbig-title {
@@ -450,7 +476,7 @@
 	}
 
 	.section1-profile {
-		background-image: url('../images/profile-image.jpg');
+		background-image: url('../images/profile-image-b.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		padding: 200px;
@@ -464,7 +490,7 @@
 	.section2-index {
 		padding: 15px;
 		margin-top : 0;
-		background-color: #f4fcff;
+		/*background-color: #f4fcff;*/
 		color : #161616;
 	}
 
@@ -494,7 +520,7 @@
 	.section1-galery {
 		padding: 250px;
 		background-attachment: fixed;
-		background-image: url('../images/pantai-3-warna-malang-by-rulayyy.jpg');
+		background-image: url('../images/pantai-3-warna-malang-by-rulayyy-b-.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 		/*background-position: 12px 12px;*/
@@ -503,13 +529,14 @@
 	.section1-tourism {
 		padding: 232px;
 		background-attachment: fixed;
-		background-image: url('../images/air-terjun-coban-rondo-2.jpg');
+		background-image: url('../images/air-terjun-coban-rondo-2-b.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 		/*background-position: 300px 0px;*/
 	}
 
 	.section2-tourism {
+		color: black;
 		padding-top : 20px;
 		padding-bottom : 20px;
 	}
@@ -756,15 +783,14 @@
 	}
 	/* End of Button */
 
-	#gallery_01 img{border:2px solid white;}
- 
- 	.active img{border:2px solid #333 !important;}
-
-	@media only screen and (max-width: 33.75em) {  /* 540px */
-		.container {
-		    width: 80%;
-		}
+	#gallery_01 img {
+		border:2px solid white;
 	}
+ 
+ 	.active img {
+ 		border:2px solid #333 !important;
+ 	}
+
 
 	@media only screen and (max-width: 45em) {  /* 720px */
 	  .column-1-sm {
@@ -812,6 +838,7 @@
 	  }
 
 	  .column-12-sm {
+
 	    width: 96%;
 	  }
 
@@ -822,12 +849,16 @@
 
 	@media only screen and (max-width: 60em) { /* 960px */
 	  .container {
-	    width: 75%;
+	    width: 100%;
 	    max-width: 60rem;
 	  }
 
 	  .section3 {
 	  	background : none;
+	  }
+
+	  .section5-index > .column-4-sm {
+	  	display: none;
 	  }
 
 	  .text-hide {
