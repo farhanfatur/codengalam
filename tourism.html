@@ -55,7 +55,7 @@
 						<h2 class="sub-title">Find Us</h2>
 						<div class="underline"></div>
 						<div class="row">
-							<a href="https://github.com/farhanfatur/codengalam">
+							<a href="https://github.com/farhanfatur/codengalam" target="_blank">
 							<div class="column-3-sm">
 									<img src="assets/images/github.png" class="img-circle-lg">
 							</div>
@@ -63,6 +63,18 @@
 						<p><font size="5" color="white">Codengalam</font></p>
 						</div>
 					</a>
+					</div>
+					<div class="row">
+						<div class="column-12-sm">
+							<a href="http://smkn1kepanjen.sch.id/web/html/index.php" target="_blank">
+							<div class="column-3-sm">
+								<img src="assets/images/logo-sekolah.png" class="img-rectangle-lg">
+							</div>
+							<div class="column-7-sm">
+								<p><font size="5" color="white">SMK Negeri 1 Kepanjen</font></p>
+							</div>
+						</a>
+						</div>
 					</div>
 
 					</div>
@@ -294,9 +306,9 @@
 
 		$.each(data.slice(start, finish), function (i, data) {
 			if(i%2 == 0) {
-				$("#list-article").append("<div class='row'><div class='column-12-sm'><div class='column-5-sm animation-right visible-hide'><img src='"+data.image+"' alt='HTML5' class='img-tourism'></div><div class='column-7-sm animation-right visible-hide'><h2 class='sub-title'>"+data.title+"</h2><p>"+data.description+"</p><button type='button' class='button button-prim' onclick=window.location.href='"+data.url+"'>Detail</button</div></div></div>");
+				$("#list-article").append("<div class='row'><div class='column-12-sm'><div class='column-5-sm animation-right visible-hide'><img src='"+data.image+"' alt='HTML5' class='img-tourism'></div><div class='column-7-sm animation-right visible-hide'><h2 class='sub-title'>"+data.title+"</h2><p>"+data.description+"</p><button type='button' class='button button-prim' onclick=window.location.href='"+data.url+"' target='_blank'>Detail</button</div></div></div>");
 			} else {
-				$("#list-article").append("<div class='row'><div class='column-12-sm'><div class='column-7-sm animation-right visible-hide'><h2 class='sub-title'>"+data.title+"</h2><p>"+data.description+"</p><button type='button' class='button button-prim' onclick=window.location.href='"+data.url+"'>Detail</button></div><div class='column-5-sm animation-right visible-hide'><img src='"+data.image+"'  alt='HTML5' class='img-tourism'></div></div></div>");
+				$("#list-article").append("<div class='row'><div class='column-12-sm'><div class='column-7-sm animation-right visible-hide'><h2 class='sub-title'>"+data.title+"</h2><p>"+data.description+"</p><button type='button' class='button button-prim' onclick=window.location.href='"+data.url+"' target='_blank'>Detail</button></div><div class='column-5-sm animation-right visible-hide'><img src='"+data.image+"'  alt='HTML5' class='img-tourism'></div></div></div>");
 			}
 		});
 	}

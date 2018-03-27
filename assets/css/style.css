@@ -46,6 +46,10 @@
 		transition : 0.2s linear;
 	}
 
+	.link-galery-overlay {
+		margin-left : 20px;
+	}
+
 	.link-news:hover {
 		color : #3e8fad;
 	}
@@ -90,6 +94,11 @@
 		width: 80px;
 		height: 80px;
 		border-radius: 50%;
+	}
+
+	.img-rectangle-lg {
+		width: 80px;
+		height: 80px;
 	}
 
 	.img-galery {
@@ -138,7 +147,7 @@
 	}
 
 	.img-profile {
-		width: 180px;
+		width: 250px;
 		height: 250px;
 	}
 
